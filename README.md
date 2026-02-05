@@ -6,8 +6,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Extensions](https://img.shields.io/badge/Extensions-12-blue.svg)]()
-[![Chrome](https://img.shields.io/badge/Chrome-Compatible-green.svg)]()
-[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg)]()
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-green.svg)](https://chromewebstore.google.com/search/Subhan%20Extensions)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
 **Enhance your browsing experience with productivity tools, AI assistants, and utility extensions**
 
@@ -36,7 +36,7 @@
 <tr>
 <td width="50%">
 
-#### 📊 BlizFlow - Business Management Extension
+#### [📊 BlizFlow - Business Management Extension](https://chromewebstore.google.com/search/Subhan%20Extensions)
 **Streamline your business operations**
 
 - Invoice management
@@ -48,7 +48,7 @@
 </td>
 <td width="50%">
 
-#### 📋 ClipTrack - Clipboard History Manager
+#### [📋 ClipTrack - Clipboard History Manager](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg)
 **Never lose your clipboard content again**
 
 - Unlimited clipboard history
@@ -63,7 +63,7 @@
 <tr>
 <td width="50%">
 
-#### ⏰ Chronos Visual Context Manager
+#### [⏰ Chronos Visual Context Manager](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff)
 **Manage your visual context efficiently**
 
 - Visual timeline tracking
@@ -75,7 +75,7 @@
 </td>
 <td width="50%">
 
-#### 📝 Smart Paste
+#### [📝 Smart Paste](https://chromewebstore.google.com/detail/smart-paste/gmjbokljijbegndgfhbmobaniejnaali)
 **Intelligent clipboard pasting**
 
 - Format-aware pasting
@@ -94,7 +94,7 @@
 <tr>
 <td width="50%">
 
-#### 🧠 Humanize AI
+#### [🧠 Humanize AI](https://chromewebstore.google.com/search/Subhan%20Extensions)
 **Make AI text sound naturally human**
 
 - Advanced text humanization
@@ -106,7 +106,7 @@
 </td>
 <td width="50%">
 
-#### 👻 GhostType AI
+#### [👻 GhostType AI](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk)
 **AI-powered typing assistance**
 
 - Smart auto-completion
@@ -125,7 +125,7 @@
 <tr>
 <td width="50%">
 
-#### 🔍 CodeLens Extension Source Explorer
+#### [🔍 CodeLens Extension Source Explorer](https://microsoftedge.microsoft.com/addons/detail/codelens-extension-sourc/dmgopgfalpffbbkfnjmmaophkkedaclg)
 **Explore and analyze source code**
 
 - Source code inspection
@@ -137,7 +137,7 @@
 </td>
 <td width="50%">
 
-#### ⌨️ Typing.com Full Paragraph Collector
+#### [⌨️ Typing.com Full Paragraph Collector](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf)
 **Enhance your typing practice**
 
 - Collect typing paragraphs
@@ -156,7 +156,7 @@
 <tr>
 <td width="50%">
 
-#### 🎮 LootOps Epic & Steam Games
+#### [🎮 LootOps Epic & Steam Games](https://chromewebstore.google.com/detail/lootops-epic-steam-games/ghghcceghdbplljhoagblgbfepepfbcl)
 **Track game deals and loot**
 
 - Real-time game deals
@@ -168,7 +168,7 @@
 </td>
 <td width="50%">
 
-#### 📥 Offline Video Downloader
+#### [📥 Offline Video Downloader](https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok)
 **Download videos for offline viewing**
 
 - Multiple format support
@@ -187,7 +187,7 @@
 <tr>
 <td width="50%">
 
-#### 🖼️ Image Converter Pro
+#### [🖼️ Image Converter Pro](https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm)
 **Professional image conversion**
 
 - Multiple format support (PNG, JPG, WebP, etc.)
@@ -199,7 +199,7 @@
 </td>
 <td width="50%">
 
-#### 🚫 Simple Ad Blocker
+#### [🚫 Simple Ad Blocker](https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi)
 **Block ads, browse faster**
 
 - Efficient ad blocking
@@ -237,8 +237,32 @@ Each extension follows a consistent, well-organized structure:
 
 ## 🚀 Installation
 
-### Option 1: Chrome Web Store (Recommended)
-*Coming soon - Links will be added after publication*
+### Option 1: Official Stores (Recommended)
+
+#### 🌐 Chrome Web Store
+Find all our extensions on the **[Chrome Web Store](https://chromewebstore.google.com/search/Subhan%20Extensions)** under the developer name **Subhan Extensions**.
+
+| Extension | Store Link |
+|-----------|------------|
+| 📋 **ClipTrack** | [Install from Chrome Store](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg) |
+| 📝 **Smart Paste** | [Install from Chrome Store](https://chromewebstore.google.com/detail/smart-paste/gmjbokljijbegndgfhbmobaniejnaali) |
+| 👻 **GhostType AI** | [Install from Chrome Store](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk) |
+| 🎮 **LootOps** | [Install from Chrome Store](https://chromewebstore.google.com/detail/lootops-epic-steam-games/ghghcceghdbplljhoagblgbfepepfbcl) |
+| 🔍 **CodeLens** | [Install from Chrome Store](https://chromewebstore.google.com/detail/codelens-extension-source/lhpkbkfmhjgfbdphndmbpfmgfjdnmklf) |
+| ⌨️ **Typing.com Collector** | [Install from Chrome Store](https://chromewebstore.google.com/detail/typingcom-full-paragraph/gfgjhmopbkgdpmddfhmphgddcbnkljce) |
+
+#### 🌐 Microsoft Edge Add-ons
+Our extensions are also available on the **[Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)** under the developer name **Subhan\_Store**.
+
+| Extension | Store Link |
+|-----------|------------|
+| ⌨️ **Typing.com Collector** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf) |
+| 🚫 **Simple Ad Blocker** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi) |
+| 📥 **Video Downloader** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok) |
+| ⌨️ **Auto Typer Pro** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/auto-typer-pro/cnofkjaifkgoakpcppnoboobgpfdblmf) |
+| 🖼️ **Image Converter Pro** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm) |
+| 🔍 **CodeLens Explorer** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/codelens-extension-sourc/dmgopgfalpffbbkfnjmmaophkkedaclg) |
+| ⏰ **Chronos Context Manager** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff) |
 
 ### Option 2: Manual Installation (Developer Mode)
 
