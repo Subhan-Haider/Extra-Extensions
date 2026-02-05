@@ -5,7 +5,7 @@
 
 [![Version](https://img.shields.io/badge/version-1.0.9-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/search/Subhan%20Extensions)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/detail/lootops-epic-steam-games/fbapdcgkainjgpgmopmgofaiieamenmi)
 [![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
 [Elite Features](#-elite-features) • [Installation](#-get-started) • [Tactical Workflow](#-tactical-workflow) • [Privacy Assurance](#-privacy--security) • [Developer](#-about-the-developer)
@@ -53,7 +53,7 @@ Equipped with a background "Service Worker" and real-time "Alarms," LootOps does
 
 ### 🌐 Official Stores (Recommended)
 Get the most stable build with automatic background updates:
-*   **Chrome Web Store**: [**Get LootOps for Chrome**](https://chromewebstore.google.com/search/Subhan%20Extensions)
+*   **Chrome Web Store**: [**Get LootOps for Chrome**](https://chromewebstore.google.com/detail/lootops-epic-steam-games/fbapdcgkainjgpgmopmgofaiieamenmi)
 *   **Edge Add-ons**: [**Search Subhan_Store**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
 ### 🏗️ Manual Installation (Developers)
