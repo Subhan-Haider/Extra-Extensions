@@ -1,94 +1,41 @@
-# Security Policy for Smart Paste
+# Security Policy: Subhan Extensions
 
-## Supported Versions
+At **Subhan Extensions**, the security of our users and their data is our absolute priority. Being an open-source collection, we rely on transparency and community vigilance to maintain the highest safety standards.
 
-We release patches for security vulnerabilities. Currently supported versions:
+## 🛡️ Our Security Commitment
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| Older   | :x:                |
+1.  **Local Isolation**: Every extension in this suite is designed to run in a sandbox. We minimize cross-origin communication to prevent data leakage.
+2.  **No Remote Scripts**: We strictly avoid the use of `eval()` or remote script loading (CDN-hosted JS) to eliminate the risk of supply-chain attacks.
+3.  **Manifest V3**: All active projects are built on the Manifest V3 standard, which provides enhanced security layers and strictly defined permissions.
+4.  **Static Analysis**: We regularly perform code audits to ensure no sensitive data is ever logged or transmitted.
 
-## Reporting a Vulnerability
+## 🚀 Supported Versions
 
-We take the security of Smart Paste seriously. If you believe you have found a security vulnerability, please report it to us as described below.
+We provide security updates for the two most recent major versions of each extension.
 
-### How to Report
+| Version Type | Status |
+| :--- | :--- |
+| **Current Stable (e.g., v1.x, v4.x)** | ✅ Supported |
+| **Previous Major Version** | ⚠️ Limited Support |
+| **Legacy Versions** | ❌ Not Supported |
 
-**Please do NOT report security vulnerabilities through public GitHub issues.**
+## 🐛 Reporting a Vulnerability
 
-Instead, please report them via:
-1. Email to the developer (if available)
-2. GitHub Security Advisory (preferred)
-3. Direct message to the maintainer
+If you've discovered a security vulnerability in any of our extensions, please help us fix it by following these steps:
 
-### What to Include
+1.  **Do Not Create a Public Issue**: To prevent exploitation, please do not report security flaws via the public GitHub Issue tracker.
+2.  **Private Disclosure**: Send a detailed report to **Subhan Haider** via private message or the dedicated security email (if available in your country).
+3.  **Details to Include**:
+    *   Extension name and version.
+    *   Description of the vulnerability.
+    *   Steps to reproduce.
+    *   Potential impact.
 
-Please include the following information:
-- Type of issue (e.g., buffer overflow, SQL injection, cross-site scripting, etc.)
-- Full paths of source file(s) related to the manifestation of the issue
-- The location of the affected source code (tag/branch/commit or direct URL)
-- Any special configuration required to reproduce the issue
-- Step-by-step instructions to reproduce the issue
-- Proof-of-concept or exploit code (if possible)
-- Impact of the issue, including how an attacker might exploit it
+## 🕒 Response Timeline
 
-### Response Timeline
+*   **Initial Acknowledgement**: Within 48 hours.
+*   **Vulnerability Assessment**: Within 5 business days.
+*   **Patch Release**: Timelines vary by complexity, but we aim for 72 hours for critical fixes.
 
-- **Initial Response**: Within 48 hours
-- **Status Update**: Within 7 days
-- **Fix Timeline**: Varies based on severity and complexity
+Thank you for helping keep the **Subhan Extensions** hive secure.
 
-## Security Measures
-
-### Code Security
-- All code is reviewed before release
-- No remote code execution
-- Minimal permission requests
-- Content Security Policy (CSP) enforced
-
-### Data Security
-- All user data stored locally using Chrome's secure storage API
-- No data transmission to external servers (unless explicitly required for functionality)
-- Encryption for sensitive data when applicable
-- No third-party analytics or tracking
-
-### Update Policy
-- Regular security audits
-- Prompt patching of discovered vulnerabilities
-- Transparent communication about security issues
-
-## Best Practices for Users
-
-1. **Keep Updated**: Always use the latest version from the Chrome Web Store
-2. **Review Permissions**: Understand what permissions the extension requires
-3. **Report Issues**: If you notice suspicious behavior, report it immediately
-4. **Verify Source**: Only install from official sources
-
-## Known Security Considerations
-
-### Permissions
-This extension requests specific permissions. Each permission is justified in our [Privacy Compliance](PRIVACY_COMPLIANCE.md) documentation.
-
-### Third-Party Dependencies
-- We minimize third-party dependencies
-- All dependencies are vetted for security
-- Regular updates to patch known vulnerabilities
-
-## Disclosure Policy
-
-When we receive a security bug report, we will:
-1. Confirm the problem and determine affected versions
-2. Audit code to find similar problems
-3. Prepare fixes for all supported versions
-4. Release patches as soon as possible
-
-## Security Hall of Fame
-
-We appreciate security researchers who responsibly disclose vulnerabilities. Contributors will be acknowledged here (with permission).
-
----
-
-**Last Updated**: 2.3 release
-
-For general questions about security, please contact the development team.
