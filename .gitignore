@@ -1,0 +1,42 @@
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore zip files (keep source only)
+*.zip
+
+# Ignore node modules if any
+node_modules/
+
+# Ignore build artifacts
+dist/
+build/
+*.crx
+*.pem
+
+# Ignore logs
+*.log
+
+# Keep the structure clean
+.env
+.env.local

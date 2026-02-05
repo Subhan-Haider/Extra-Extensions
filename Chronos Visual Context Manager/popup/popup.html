@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronos Ultima</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Background Ambient Glows -->
+    <div class="glow-orb" style="top: -100px; left: -100px; background: rgba(99, 102, 241, 0.15);"></div>
+    <div class="glow-orb" style="bottom: -100px; right: -100px; background: rgba(6, 182, 212, 0.1);"></div>
+
+    <div class="app-container">
+        <!-- Header Section -->
+        <header>
+            <div class="brand">
+                <div class="logo-morph">
+                    <img src="../icons/icon48.png" alt="Logo">
+                </div>
+                <div>
+                    <h1>CHRONOS</h1>
+                    <p id="currentDate" class="date-subtitle">Tuesday, Jan 27</p>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="themeToggle" class="btn-icon" title="Atmosphere Toggle">
+                    <svg id="themeIcon" style="width:20px;height:20px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M12,18C15.31,18 18,15.31 18,12C18,8.69 15.31,6 12,6C8.69,6 6,8.69 6,12C6,15.31 8.69,18 12,18M12,20V22H14V20H12M12,2V4H14V2H12M20,11V13H22V11H20M2,11V13H4V11H2M17.66,16.24L19.07,17.66L20.48,16.24L19.07,14.83L17.66,16.24M5,16.24L6.41,17.66L7.83,16.24L6.41,14.83L5,16.24M17.66,6.34L19.07,4.93L20.48,6.34L19.07,7.76L17.66,6.34M5,6.34L6.41,4.93L7.83,6.34L6.41,7.76L5,6.34Z" />
+                    </svg>
+                </button>
+                <div id="focusTimer" class="timer-orb hidden">
+                    <span id="timerDisplay">25:00</span>
+                    <button id="timerToggle" class="timer-play-btn">
+                        <svg id="timerIcon" style="width:14px;height:14px" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dynamic Welcome Greeting -->
+        <div class="welcome-section">
+            <h2 id="greetingText">Good Afternoon, Researcher</h2>
+            <p>Ready to restore your mental workspace?</p>
+        </div>
+
+        <!-- Dashboard Card -->
+        <div class="dashboard-hero">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Tabs Active</span>
+                    <span id="tabCount" class="stat-value">--</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-label">Total Snippets</span>
+                    <span id="totalSnippetsCount" class="stat-value">--</span>
+                </div>
+            </div>
+            <div class="hero-actions">
+                <button id="snapshotBtn" class="premium-button">
+                    <span>Capture Snapshot</span>
+                    <svg style="width:18px;height:18px" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                            d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z" />
+                    </svg>
+                </button>
+                <div class="util-row">
+                    <button id="backupBtn" class="pill-btn" title="Export Context">
+                        <svg style="width:16px;height:16px" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12,15L15.5,11.5L14.08,10.08L13,11.17V5H11V11.17L9.92,10.08L8.5,11.5L12,15M18,7V9H20V15A1,1 0 0,1 19,16H5A1,1 0 0,1 4,15V9H6V7H4A2,2 0 0,0 2,9V15A2,2 0 0,0 4,17H8V18A2,2 0 0,0 10,20H14A2,2 0 0,0 16,18V17H20A2,2 0 0,0 22,15V9A2,2 0 0,0 20,7H18M14,18H10V17H14V18Z" />
+                        </svg>
+                        <span>Backup</span>
+                    </button>
+                    <button id="importBtn" class="pill-btn" title="Sync Intelligence">
+                        <svg style="width:16px;height:16px" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M12,10L8.5,13.5L9.92,14.92L11,13.83V20H13V13.83L14.08,14.92L15.5,13.5L12,10M17,17V15H19V9A1,1 0 0,0 18,8H6A1,1 0 0,0 5,9V15H7V17H5A2,2 0 0,1 3,15V9A2,2 0 0,1 5,7H8V6A2,2 0 0,1 10,4H14A2,2 0 0,1 16,6V7H19A2,2 0 0,1 21,9V15A2,2 0 0,1 19,17H17M14,6H10V7H14V6Z" />
+                        </svg>
+                        <span>Restore</span>
+                    </button>
+                    <input type="file" id="importFile" style="display: none;" accept=".json">
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="smart-search">
+            <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+            </svg>
+            <input type="text" id="globalSearch" placeholder="Search keywords, memory tags, or titles...">
+        </div>
+
+        <main>
+            <!-- Brain Workspace -->
+            <section class="content-section">
+                <div class="section-top">
+                    <div class="section-title-group">
+                        <span class="section-icon">🗄️</span>
+                        <h2>Brain Workspace</h2>
+                    </div>
+                    <div class="section-actions">
+                        <button id="showArchivedBtn" class="action-toggle" title="Show Archives">
+                            <svg style="width:16px;height:16px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M20,18H4V8H20V18M20,6H12L10,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8A2,2 0 0,0 20,6M16,12H8V14H16V12Z" />
+                            </svg>
+                        </button>
+                        <button id="newProjectBtn" class="plus-btn">+</button>
+                    </div>
+                </div>
+                <div id="projectsGrid" class="projects-mesh">
+                    <div class="loading-state">Syncing dimensions...</div>
+                </div>
+            </section>
+
+            <!-- Knowledge Base -->
+            <section class="content-section">
+                <div class="section-top">
+                    <div class="section-title-group">
+                        <span class="section-icon">🧠</span>
+                        <h2>Harvested Knowledge</h2>
+                    </div>
+                </div>
+                <div id="snippetsList" class="knowledge-feed">
+                    <div class="empty">No snippets harvested from the web yet.</div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Context Modal -->
+        <div id="projectModal" class="modal-system">
+            <div class="modal-backdrop"></div>
+            <div class="modal-window">
+                <header class="modal-header">
+                    <div class="modal-title">
+                        <h2 id="modalProjectName">Context Viewer</h2>
+                        <span id="modalMeta">Selected project details</span>
+                    </div>
+                    <button id="closeModal" class="close-btn">&times;</button>
+                </header>
+                <div class="modal-content-area">
+                    <div class="modal-top-actions">
+                        <button id="groupBtn" class="action-card-btn">
+                            <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M16 12V10H20V12H16M16 7V5H20V7H16M16 17V15H20V17H16M12 5H4C2.9 5 2 5.9 2 7V17C2 18.1 2.9 19 4 19H12C13.1 19 14 18.1 14 17V7C14 5.9 13.1 5 12 5M12 17H4V7H12V17Z" />
+                            </svg>
+                            <span>Cluster Group</span>
+                        </button>
+                        <button id="exportBtn" class="action-card-btn">
+                            <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M2,12H4V17H20V12H22V17A2,2 0 0,1 20,19H4A2,2 0 0,1 2,17V12M12,15L17.5,9.5L16.08,8.08L13,11.17V2H11V11.17L7.92,8.08L6.5,9.5L12,15Z" />
+                            </svg>
+                            <span>Markdown</span>
+                        </button>
+                        <button id="archiveBtn" class="action-card-btn">
+                            <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M3,3H21V7H3V3M4,8H20V21H4V8M9.5,11A0.5,0.5 0 0,0 9,11.5V13H15V11.5A0.5,0.5 0 0,0 14.5,11H9.5Z" />
+                            </svg>
+                            <span>Archive</span>
+                        </button>
+                        <button id="deleteProjectBtn" class="action-card-btn danger">
+                            <svg style="width:20px;height:20px" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19V4M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                            </svg>
+                            <span>Purge</span>
+                        </button>
+                    </div>
+                    <div id="projectItemsList" class="modal-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!--
+ Source by Subhan Haider
+ All rights reserved.
+ -->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src https: http: data: blob:">
+    <title>CodeLens - Extension Source Explorer</title>
+    <link rel="stylesheet" type="text/css" href="explorer.css">
+    <link rel="stylesheet" type="text/css" href="lib/prettify/prettify.css">
+</head>
+
+<body>
+    <header id="top-bar">
+        <div class="logo-container" id="logo-home">
+            <img src="icons/icon-128.png" alt="CodeLens">
+            <span class="logo-text">CodeLens</span>
+        </div>
+
+
+        <form id="filter-form" style="display: contents;">
+            <input type="text" id="file-filter" placeholder="Search files or !content" list="file-filter-patterns">
+
+            <div class="filter-group">
+                <label class="filter-tag" title="Filter: Code (JS, TS, JSON)">
+                    <input type="checkbox" data-filter-type="code">
+                    <span class="filter-label-description">Code</span>
+                    <span class="gcount"></span>
+                </label>
+                <label class="filter-tag" title="Filter: Markup (HTML, CSS)">
+                    <input type="checkbox" data-filter-type="markup">
+                    <span class="filter-label-description">Markup</span>
+                    <span class="gcount"></span>
+                </label>
+                <label class="filter-tag" title="Filter: Images">
+                    <input type="checkbox" data-filter-type="images">
+                    <span class="filter-label-description">Images</span>
+                    <span class="gcount"></span>
+                </label>
+                <label class="filter-tag" title="Filter: Locales">
+                    <input type="checkbox" data-filter-type="locales">
+                    <span class="filter-label-description">Locales</span>
+                    <span class="gcount"></span>
+                </label>
+                <label class="filter-tag" title="Filter: Other">
+                    <input type="checkbox" data-filter-type="misc">
+                    <span class="filter-label-description">Other</span>
+                    <span class="gcount"></span>
+                </label>
+            </div>
+        </form>
+
+        <div class="top-actions">
+            <button id="theme-toggle" class="btn-action btn-secondary" title="Toggle Theme"
+                style="padding: 8px; display: flex; align-items: center; justify-content: center;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="sun-icon">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="moon-icon" style="display: none;">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+            </button>
+            <a id="download-link" class="btn-action btn-secondary">Download Zip</a>
+            <a id="download-link-package" class="btn-action btn-secondary">Download CRX</a>
+            <a id="open-explorer" class="btn-action">New Task</a>
+        </div>
+    </header>
+
+    <div id="advanced-open">
+        <div class="site-specific-form">
+            <h2 style="margin-top: 0;">Explorer Command Center</h2>
+            <p style="color: var(--text-muted); margin-bottom: 32px;">Enter an extension URL or drag and drop a file to
+                begin analysis.</p>
+
+            <form id="advanced-open-form">
+                <input type="url" placeholder="Paste Chrome Web Store / Addons URL" id="url-input" name="crx">
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <input type="submit" value="Initiate Scan" style="flex: 1;">
+                    <span style="color: var(--text-dim);">or</span>
+                    <div id="drop-zone"
+                        style="flex: 1; border: 2px dashed var(--border); border-radius: 10px; padding: 0 16px; height: 44px; display: flex; align-items: center; justify-content: center; font-size: 13px; color: var(--text-muted); position: relative; transition: var(--transition); cursor: pointer; overflow: hidden;">
+                        Drop .crx / .zip here
+                        <input type="file" id="file-input"
+                            style="position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <form id="advanced-open-cws-extension" class="site-specific-form">
+            <h3>Chrome Web Store Generator</h3>
+            <div title="Extension ID. This is the 32-character word in a Chrome Web Store URL">
+                <span class="labeltext">Direct Extension ID</span>
+                <input type="text" pattern="[a-p]{32}" name="xid" placeholder="e.g. jmiefebpafnjifcapmndedmoofmgbofp"
+                    required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                <div>
+                    <span class="labeltext">Target OS</span>
+                    <select name="os"
+                        style="width: 100%; height: 40px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                        <option value="win">Windows</option>
+                        <option value="linux">Linux</option>
+                        <option value="mac">macOS</option>
+                        <option value="cros">ChromeOS</option>
+                        <option value="android">Android</option>
+                    </select>
+                </div>
+                <div>
+                    <span class="labeltext">Architecture</span>
+                    <select name="arch"
+                        style="width: 100%; height: 40px; background: var(--bg-hover); border: 1px solid var(--border); border-radius: 8px; color: var(--text-main); padding: 0 12px;">
+                        <option value="x86-64">x86-64</option>
+                        <option value="x86-32">x86-32</option>
+                        <option value="arm">ARM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="submit-if-valid" hidden style="margin-top: 24px;">
+                <input type="submit" value="Launch Analysis">
+                <a href=""
+                    style="margin-left: 16px; font-size: 13px; color: var(--primary-bright); text-decoration: none;">View
+                    on Web Store</a>
+            </div>
+        </form>
+
+        <form id="advanced-open-amo-extension" class="site-specific-form">
+            <h3>Firefox Addons (AMO) Linker</h3>
+            <div title="Add-on slug (from the URL) or add-on ID (GUID or ID containing @)">
+                <span class="labeltext">Add-on Slug or ID</span>
+                <input type="text" pattern="[^/]+" name="amoslugorid" placeholder="slug-from-url or guid@extension"
+                    required>
+                <input type="submit" value="Query AMO Database">
+            </div>
+            <div>
+                <div class="amodescription"></div>
+                <ul class="amoxpilist"></ul>
+            </div>
+        </form>
+    </div>
+
+    <!-- Command Palette Modal -->
+    <div id="command-palette" class="hidden"
+        style="position:fixed; inset:0; background:rgba(0,0,0,0.8); backdrop-filter:blur(12px); z-index:2000; display:flex; align-items:flex-start; justify-content:center; padding-top:10vh;">
+        <div class="site-specific-form"
+            style="width:100%; max-width:600px; padding:0; overflow:hidden; border-radius:16px; box-shadow:0 24px 48px rgba(0,0,0,0.5); animation:modalEnter 0.2s ease-out;">
+            <div
+                style="padding:16px; background:var(--bg-panel); border-bottom:1px solid var(--border); display:flex; align-items:center;">
+                <input type="text" id="command-input" placeholder="Search files... (Use ↑↓ to navigate, Enter to open)"
+                    style="flex:1; background:transparent; border:none; color:var(--text-main); font-size:16px; outline:none; padding:8px 12px;">
+                <button id="close-command-palette" class="btn-action btn-secondary"
+                    style="padding:6px; min-width:32px; height:32px; border-radius:8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div id="command-results" style="max-height:400px; overflow-y:auto; background:var(--bg-main);">
+                <!-- Results injected here -->
+            </div>
+            <div
+                style="padding:10px 16px; background:var(--bg-panel); border-top:1px solid var(--border); font-size:11px; color:var(--text-dim); display:flex; justify-content:space-between;">
+                <span>Navigate: ↑↓ &bull; Open: Enter &bull; Close: Esc</span>
+                <span id="command-total-files">0 files indexed</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- GitHub Integration Modal -->
+    <div id="github-modal" class="hidden"
+        style="position:fixed; inset:0; background:rgba(0,0,0,0.85); backdrop-filter:blur(24px); z-index:1500; display:flex; align-items:center; justify-content:center; padding: 20px;">
+        <div class="site-specific-form"
+            style="width:100%; max-width:480px; margin:0; animation:modalEnter 0.45s cubic-bezier(0.16, 1, 0.3, 1); background:var(--bg-panel); border:1px solid var(--border-bright); border-radius:32px; box-shadow:0 32px 100px rgba(0,0,0,0.5); overflow:hidden; padding: 0; position:relative;">
+
+            <!-- Abstract Background Accent -->
+            <div
+                style="position:absolute; top:-100px; right:-100px; width:200px; height:200px; background:var(--primary); filter:blur(100px); opacity:0.1; pointer-events:none;">
+            </div>
+
+            <!-- Modal Header -->
+            <div style="padding:40px 40px 0; position:relative;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="var(--text-main)">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" />
+                        </svg>
+                        <h2
+                            style="margin:0; font-size:24px; font-weight:700; color:var(--text-main); letter-spacing:-0.5px;">
+                            GitHub</h2>
+                    </div>
+                    <button id="close-github-modal" class="btn-action btn-secondary"
+                        style="width:32px; height:32px; border-radius:50%; font-size:20px; transition:var(--transition); background:transparent; border:none; color:var(--text-dim);">&times;</button>
+                </div>
+                <p style="color:var(--text-muted); font-size:16px; margin:12px 0 0; font-weight:500;">Sync your code to
+                    GitHub for collaboration.</p>
+            </div>
+
+            <!-- Content Area -->
+            <div style="padding:40px;">
+                <!-- Auth Selection -->
+                <div id="github-auth-section">
+                    <button id="gh-login-oauth" class="btn-action"
+                        style="width:100%; height:54px; display:flex; align-items:center; justify-content:center; gap:16px; background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:14px; color:#fff; font-weight:700; font-size:16px; transition:var(--transition); cursor:pointer;">
+                        Connect with GitHub
+                    </button>
+
+                    <div id="gh-device-flow" class="hidden" style="margin-top:32px;">
+                        <div
+                            style="background:rgba(0,0,0,0.2); border:1px solid var(--border); border-radius:18px; padding:24px; text-align:center;">
+                            <p style="font-size:13px; color:var(--text-muted); margin-bottom:16px;">Activate at <a
+                                    id="gh-device-url" href="#" target="_blank"
+                                    style="color:#e91e63; font-weight:700; text-decoration:none;">github.com/login/device</a>
+                            </p>
+                            <div id="gh-device-code"
+                                style="font-size:32px; font-weight:800; letter-spacing:6px; color:#e91e63; margin-bottom:16px; font-family:'JetBrains Mono', monospace;">
+                                ---- ----</div>
+                            <div style="font-size:12px; color:var(--text-dim);">Waiting for verification...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Management Section -->
+                <div id="github-profile-section" class="hidden">
+                    <h3 style="margin:0 0 24px; font-size:18px; font-weight:600; color:var(--text-main);">Set up your
+                        GitHub repo</h3>
+
+                    <div
+                        style="display:flex; border:1px solid var(--border); border-radius:14px; overflow:hidden; margin-bottom:32px; background:transparent;">
+                        <button id="gh-mode-new"
+                            style="flex:1; border:none; background:#e91e63; color:#fff; padding:14px; font-size:14px; font-weight:600; cursor:pointer; transition:var(--transition);">Create
+                            new repo</button>
+                        <button id="gh-mode-existing"
+                            style="flex:1; border:none; background:transparent; color:var(--text-main); padding:14px; font-size:14px; font-weight:600; cursor:pointer; transition:var(--transition);">Connect
+                            to existing repo</button>
+                    </div>
+
+                    <div id="gh-new-repo-container">
+                        <div style="margin-bottom:20px;">
+                            <label class="labeltext"
+                                style="display:block; margin-bottom:10px; font-size:14px; font-weight:600; color:var(--text-main);">Repository
+                                Name</label>
+                            <input type="text" id="gh-repo-name" placeholder="Repository Name"
+                                style="width:100%; height:48px; border:1px solid var(--border); border-radius:14px; padding:0 16px; color:var(--text-main); background:transparent; font-size:15px; outline:none;">
+                        </div>
+                    </div>
+
+                    <div id="gh-existing-repo-container" class="hidden">
+                        <div style="margin-bottom:20px;">
+                            <label class="labeltext"
+                                style="display:block; margin-bottom:10px; font-size:14px; font-weight:600; color:var(--text-main);">Select
+                                Repository</label>
+                            <select id="gh-existing-repos"
+                                style="width:100%; height:48px; border:1px solid var(--border); border-radius:14px; padding:0 16px; color:var(--text-main); background:transparent; font-size:15px; outline:none; appearance:none;">
+                                <option value="" disabled selected>Select a repository...</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:32px;">
+                        <label class="labeltext"
+                            style="display:block; margin-bottom:10px; font-size:14px; font-weight:600; color:var(--text-main);">Branch</label>
+                        <input type="text" id="gh-repo-branch" placeholder="main" value="main"
+                            style="width:100%; height:48px; border:1px solid var(--border); border-radius:14px; padding:0 16px; color:var(--text-main); background:transparent; font-size:15px; outline:none;">
+                    </div>
+
+                    <button id="gh-upload-btn" class="btn-action"
+                        style="min-width:140px; height:46px; border-radius:12px; font-weight:700; font-size:14px; background:#e91e63; color:#fff; border:none; cursor:pointer; transition:var(--transition); box-shadow:0 4px 12px rgba(233,30,99,0.3);">
+                        Create Repo
+                    </button>
+
+                    <button id="gh-logout"
+                        style="background:transparent; border:none; color:var(--text-dim); font-size:12px; cursor:pointer; padding:0; margin-left:20px; font-weight:600; text-decoration:underline;">Sign
+                        Out</button>
+
+                    <div id="gh-status"
+                        style="margin-top:20px; font-size:13px; font-weight:500; color:var(--text-dim); min-height:20px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Snippet -->
+    <div style="background:rgba(0,0,0,0.2); padding:20px 40px; text-align:center; border-top:1px solid var(--border);">
+        <p style="margin:0; font-size:12px; color:var(--text-dim); font-weight:600; letter-spacing:0.3px;">
+            Connected via GitHub Device Authorization Flow • <span style="color:var(--accent-green);">Secured
+                Session</span></p>
+    </div>
+    </div>
+    </div>
+
+    <main style="display: flex; height: calc(100vh - var(--topbar-height));">
+        <aside id="left-panel">
+            <div id="sidebar-header">
+                <div class="sidebar-title">
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                    <span id="root-folder-name">Explorer</span>
+                </div>
+                <div class="sidebar-actions">
+                    <button class="sidebar-btn" title="New File (Decorative)"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg></button>
+                    <button class="sidebar-btn" title="New Folder (Decorative)"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                            </path>
+                        </svg></button>
+                    <button id="refresh-tree" class="sidebar-btn" title="Refresh Tree"><svg width="14" height="14"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                        </svg></button>
+                    <button id="collapse-all" class="sidebar-btn" title="Collapse All Folders"><svg width="14"
+                            height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 14 10 14 10 20"></polyline>
+                            <polyline points="20 10 14 10 14 4"></polyline>
+                            <line x1="14" y1="10" x2="21" y2="3"></line>
+                            <line x1="3" y1="21" x2="10" y2="14"></line>
+                        </svg></button>
+                </div>
+            </div>
+            <div class="content">
+                <ol id="file-list"></ol>
+            </div>
+            <button id="toggle-sidebar" title="Collapse Sidebar (Ctrl+B)">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+            <div id="sidebar-footer">
+                <button id="github-connect-btn" class="sidebar-footer-btn" title="Cloud Sync">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    <span>GitHub</span>
+                </button>
+            </div>
+        </aside>
+
+        <section id="right-panel">
+            <div id="source-toolbar">
+                <span id="current-file-path"
+                    style="font-size: 13px; color: var(--text-muted); font-family: 'JetBrains Mono';"></span>
+            </div>
+            <div id="source-code">
+                <div id="dashboard-view" class="hidden">
+                    <div class="dashboard-grid">
+                        <div class="dash-card main-stats">
+                            <div class="dash-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="var(--primary)" stroke-width="2">
+                                    <path
+                                        d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                    </path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg></div>
+                            <h3>Project Overview</h3>
+                            <div class="stats-row">
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Files</span>
+                                    <span id="dash-file-count" class="stat-value">-</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Manifest</span>
+                                    <span id="dash-mv" class="stat-value">-</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-label">Total Size</span>
+                                    <span id="dash-size" class="stat-value">-</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dash-card highlight-card">
+                            <h3>Permissions & Security</h3>
+                            <div id="dash-permissions-list" class="permissions-chips"></div>
+                        </div>
+
+                        <div class="dash-card">
+                            <h3>Entry Points</h3>
+                            <div id="dash-entry-points" class="entry-list"></div>
+                        </div>
+
+                        <div class="dash-card">
+                            <h3>Security Intel</h3>
+                            <div id="dash-security-alerts" class="alerts-list"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="initial-status">
+                    <div class="hero-content">
+                        <img src="icons/icon-128.png" id="hero-logo" style="width: 100px; margin-bottom: 24px;">
+                        <h2>Welcome to <span id="welcome-app-name">CodeLens</span></h2>
+                        <p>A professional extension dissection and analysis suite. Ready to explore.</p>
+
+                        <div id="loading-container" class="hidden"
+                            style="margin-top: 40px; width: 100%; max-width: 400px; padding: 32px; background: var(--bg-panel); border: 1px solid var(--border); border-radius: 20px; box-shadow: var(--shadow-lg);">
+                            <div id="loading-msg"
+                                style="font-weight: 600; margin-bottom: 16px; color: var(--text-main); font-size: 14px;">
+                                Preparing Analysis...</div>
+                            <div class="progress-wrapper"
+                                style="width: 100%; height: 8px; background: var(--bg-hover); border-radius: 4px; overflow: hidden; position: relative; margin-bottom: 12px;">
+                                <div id="loading-bar"
+                                    style="position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: linear-gradient(90deg, var(--primary), var(--primary-bright)); transition: width 0.2s ease-out; box-shadow: 0 0 10px var(--primary-glow);">
+                                </div>
+                            </div>
+                            <div id="loading-stats"
+                                style="font-size: 11px; color: var(--text-dim); font-family: 'JetBrains Mono';">0 / 0
+                            </div>
+                        </div>
+
+                        <div id="hero-actions" style="margin-top: 32px;">
+                            <button class="btn-action" onclick="document.getElementById('open-explorer').click()">New
+                                Analysis Task</button>
+                        </div>
+
+                        <div id="recent-inspected-container" class="hidden"
+                            style="margin-top: 48px; width: 100%; max-width: 600px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <h3
+                                    style="font-size: 13px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.1em; margin: 0; font-weight: 700;">
+                                    Recently Inspected</h3>
+                                <button id="clear-recent" class="btn-action btn-secondary"
+                                    style="padding: 4px 12px; font-size: 11px; height: 28px; min-height: 28px;">Clear
+                                    History</button>
+                            </div>
+                            <div id="recent-list" style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <!-- Recently viewed extensions will appear here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <span>&copy; 2026 CodeLens Pro</span>
+            <span style="opacity: 0.3;">|</span>
+            <a href="https://github.com/Subhan-Haider" target="_blank"
+                style="color: inherit; text-decoration: none; display: flex; align-items: center; gap: 6px; font-weight: 600;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12" />
+                </svg>
+                By Subhan
+            </a>
+        </div>
+        <div class="total-size-wrapper" hidden>
+            <span style="color: var(--text-dim); font-weight: 400; margin-right: 8px;">Total Uncompressed
+                Payload:</span>
+            <span id="total-size"></span>
+        </div>
+    </footer>
+
+    <datalist id="file-filter-patterns">
+        <option value="\.js$" label="JavaScript">
+        <option value="\.css$" label="CSS">
+        <option value="\.html?$" label="HTML">
+        <option value="!chrome." label="Files containing chrome.">
+    </datalist>
+
+    <!-- Core Scripts -->
+    <script src="storage-sync-polyfill.js"></script>
+    <script src="lib/zip.js/zip.js"></script>
+    <script src="lib/zip.js/mime-types.js"></script>
+    <script src="lib/efficienttextwriter.js"></script>
+    <script src="lib/uint8arraywriter.js"></script>
+    <script src="lib/package-to-zip.js"></script>
+    <script src="chrome-platform-info.js"></script>
+    <script src="cws_pattern.js"></script>
+    <script src="lib/beautify/beautify.js"></script>
+    <script src="lib/beautify/minify.json.js"></script>
+    <script src="lib/prettify/prism.js" data-manual></script>
+    <script src="lib/prettify/prism-source-extensions.js"></script>
+    <script src="lib/sha256.js"></script>
+    <script src="lib/spark-md5.min.js"></script>
+    <script src="lib/modern-crypto.js"></script>
+    <script src="search-tools.js"></script>
+    <script src="asn1lite.js"></script>
+    <script src="mozcose.js"></script>
+    <script src="explorer.js"></script>
+</body>
+
+</html>

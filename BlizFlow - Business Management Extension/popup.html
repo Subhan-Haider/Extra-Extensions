@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlizFlow Extension</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body ondragstart="return false;" onselectstart="return false;" oncontextmenu="return false;">
+  <!-- Loading State -->
+  <div id="loadingState" class="loading-overlay" hidden>
+    <div class="spinner"></div>
+    <p>Loading extension...</p>
+  </div>
+
+  <!-- ONE scroll container -->
+  <div class="popup-scroll">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1>BlizFlow</h1>
+      </div>
+      <div class="header-right">
+        <div class="status" id="status">
+          <span class="status-dot" id="statusDot"></span>
+          <span id="statusText">Connecting...</span>
+        </div>
+        <div class="user-info" id="userInfo">
+          <div class="user-avatar" id="userAvatar">U</div>
+          <div class="user-details">
+            <div class="user-name" id="userName">Not logged in</div>
+            <div class="user-status" id="userStatus">Offline</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="section">
+      <h2>Quick Actions</h2>
+      <div class="actions-grid">
+        <button class="action-btn" id="btnInvoice" data-action="invoice">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+          <span>New Invoice</span>
+        </button>
+        <button class="action-btn" id="btnClient" data-action="client">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+          <span>Add Client</span>
+        </button>
+        <button class="action-btn" id="btnExpense" data-action="expense">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          <span>Add Expense</span>
+        </button>
+        <button class="action-btn" id="btnDashboard" data-action="dashboard">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/>
+            <rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/>
+            <rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          <span>Dashboard</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="section">
+      <h2>Quick Stats</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-value" id="statInvoices">0</div>
+          <div class="stat-label">Invoices</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statClients">0</div>
+          <div class="stat-label">Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statRevenue">$0</div>
+          <div class="stat-label">Revenue</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="statPending">0</div>
+          <div class="stat-label">Pending</div>
+        </div>
+      </div>
+      <!-- Legacy stats (hidden but kept for compatibility) -->
+      <div style="display: none;">
+        <div id="todayInvoices">0</div>
+        <div id="todayRevenue">$0</div>
+        <div id="todayExpenses">$0</div>
+        <div id="todayTime">0h</div>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="section">
+      <h2>Recent Activity</h2>
+      <div class="activity-list" id="activityList">
+        <div class="empty-state" style="text-align: center; padding: 20px; color: #64748b;">
+          <div style="font-size: 32px; margin-bottom: 8px;">📋</div>
+          <div style="font-weight: 500; margin-bottom: 4px;">Loading...</div>
+        </div>
+      </div>
+      <!-- Legacy recent items container (hidden but kept for compatibility) -->
+      <div class="recent-items" id="recentItems" style="display: none;">
+        <div class="empty-state">No recent items</div>
+      </div>
+    </div>
+
+    <!-- Features -->
+    <div class="section">
+      <h2>Features</h2>
+      <!-- Feature Toggles -->
+      <div class="features-list">
+        <label class="feature-toggle">
+          <input type="checkbox" id="toggleAutoFill" checked>
+          <span>Auto-fill Forms</span>
+        </label>
+        <label class="feature-toggle">
+          <input type="checkbox" id="toggleNotifications" checked>
+          <span>Browser Notifications</span>
+        </label>
+        <label class="feature-toggle">
+          <input type="checkbox" id="toggleQuickCapture" checked>
+          <span>Quick Receipt Capture</span>
+        </label>
+        <label class="feature-toggle">
+          <input type="checkbox" id="togglePerformance" checked>
+          <span>Performance Boost</span>
+        </label>
+      </div>
+      <!-- Dynamic Features Grid (hidden but kept for compatibility) -->
+      <div class="features-grid" id="featuresGrid" style="display: none;">
+        <!-- Features will be loaded dynamically -->
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="section">
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="openDashboard">Open Dashboard</button>
+        <button class="btn btn-secondary" id="openDashboardPopup">Dashboard Popup</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-buttons">
+        <button class="btn-secondary" id="btnSettings">Settings</button>
+        <button class="btn-secondary" id="btnRefresh">Refresh</button>
+      </div>
+      <div class="footer-links">
+        <a href="#" id="helpLink">Help</a>
+        <a href="#" id="feedbackLink">Feedback</a>
+        <a href="#" id="logoutLink">Logout</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup-init.js"></script>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

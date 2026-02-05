@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanize - AI Text Humanizer</title>
+    <link href="./css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <button id="themeToggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+
+        <div class="container" id="container">
+            <header class="brand-header">
+                <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <img src="icon.png" alt="Logo" class="brand-logo">
+                        <div>
+                            <h1 class="brand-name">Humanize</h1>
+                            <div
+                                style="font-size: 0.65rem; color: var(--accent-color); font-weight: 700; text-transform: uppercase;">
+                                Super Simple Neural Engine</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Mode Selector -->
+            <section class="mode-selector">
+                <div class="mode-card active" data-mode="standard">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>Standard</span>
+                </div>
+                <div class="mode-card" data-mode="natural">
+                    <i class="fa-solid fa-leaf"></i>
+                    <span>Natural</span>
+                </div>
+                <div class="mode-card" data-mode="academic">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academic</span>
+                </div>
+            </section>
+
+            <!-- Configuration -->
+            <div class="function-btn">
+                <div class="settings-row">
+                    <div class="dropdown" style="flex: 1.5;">
+                        <button class="dropbtn" id="dropbtn" type="button">
+                            <span>Select Target Detector</span>
+                            <i class="fa-solid fa-caret-down"></i>
+                        </button>
+                        <div id="aiContentDetectorDropdown" class="dropdown-content">
+                            <a href="#" data-value="Originality.ai">Originality.ai</a>
+                            <a href="#" data-value="Winston AI">Winston AI</a>
+                            <a href="#" data-value="ZeroGPT.com">ZeroGPT.com</a>
+                            <a href="#" data-value="GPTZero.me">GPTZero.me</a>
+                            <a href="#" data-value="Turnitin">Turnitin</a>
+                            <a href="#" data-value="CopyLeaks.com">CopyLeaks.com</a>
+                            <input type="hidden" id="dropdownValue">
+                        </div>
+                    </div>
+
+                    <div class="slidecontainer">
+                        <div class="slider-val" id="sliderVal">Intensity: 90%</div>
+                        <div class="slider-text">Flow</div>
+                        <input type="range" min="0.1" max="1.0" step="0.1" value="0.9" class="slider" id="myRange">
+                        <div class="slider-text">Undetectable</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Master Workspace -->
+            <main class="inputs">
+                <div class="input-text">
+                    <div class="scanning-beam" id="inputScan"></div>
+                    <div class="area-controls">
+                        <button class="control-btn" id="clearInput" title="Clear All"><i
+                                class="fa-solid fa-eraser"></i></button>
+                    </div>
+                    <textarea placeholder="Input AI-generated content for neural processing..." name="input-text"
+                        id="input-text-box"></textarea>
+                    <button class="rewrite-button" id="rewriteBtn" type="button">
+                        <i class="fa-solid fa-bolt-lightning"></i> Execute Humanization
+                        <span class="word-count" style="margin-left: 10px; opacity: 0.6;">[<span id="wordCount">0</span>
+                            words]</span>
+                    </button>
+                </div>
+
+                <div class="gen-text">
+                    <div class="scanning-beam" id="outputScan"></div>
+                    <div class="area-controls">
+                        <button class="control-btn" id="exportBtn" title="Download Text (.txt)"><i
+                                class="fa-solid fa-file-export"></i></button>
+                        <button class="control-btn" id="copyBtn" title="Copy to Clipboard"><i
+                                class="fa-solid fa-copy"></i></button>
+                    </div>
+                    <textarea id="copyText" placeholder="Result will appear here..." readonly></textarea>
+                    <button class="copy-button" id="mainCopyBtn">
+                        <i class="fa-solid fa-share-nodes"></i> Copy Result
+                    </button>
+                </div>
+            </main>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <div class="history-header">
+                    <div class="history-title">Recent Generations</div>
+                    <button id="clearHistory" class="history-toggle" title="Clear History"><i
+                            class="fa-solid fa-trash-can"></i></button>
+                </div>
+                <div id="historyList" class="history-list">
+                    <!-- History Items injected here -->
+                    <div style="text-align: center; opacity: 0.4; font-size: 0.75rem; padding: 1rem;">No history yet.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Credentials -->
+            <section class="info-entry">
+                <input type="password" id="apiKey" class="entry-value" placeholder="Enter Authentication Key">
+                <button id="saveApiKey" class="save-button">Link Key</button>
+            </section>
+
+            <footer class="info-text">
+                <div style="display: flex; justify-content: space-between; align-items: center; opacity: 0.8;">
+                    <span>v2.5.0 Pro Edition</span>
+                    <span id="custom-tooltip"
+                        style="position: static; transform: none; display: none; font-size: 0.7rem; background: var(--accent-color); color: #000; padding: 2px 8px; border-radius: 4px;"></span>
+                    <span><i class="fa-solid fa-shield-halved" style="color: var(--success-color);"></i> System
+                        Secure</span>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

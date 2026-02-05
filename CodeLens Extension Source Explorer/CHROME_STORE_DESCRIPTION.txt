@@ -1,0 +1,166 @@
+🔍 Professional Extension Source Code Analysis Tool
+
+CodeLens is the ultimate developer tool for inspecting, analyzing, and understanding browser extensions. Whether you're a security researcher, developer, or curious user, CodeLens provides instant access to the source code of any Chrome, Firefox, or Opera extension.
+
+✨ KEY FEATURES
+
+🎯 One-Click Inspection
+• Instantly view source code of any extension from the Chrome Web Store
+• Support for Firefox Add-ons, Opera Extensions, and Edge Add-ons
+• Direct integration with browser context menus
+• Recently inspected history for quick access
+
+🔐 Advanced Security Audit
+• Automated security intelligence scanning
+• Risky pattern detection (eval, innerHTML, document.write)
+• Permission analysis with risk level grading (Low/Medium/High)
+• Dynamic security score calculation (0-100)
+• Comprehensive manifest intelligence
+• Manifest version detection (MV2/MV3)
+
+💼 Professional Code Explorer
+• Beautiful syntax highlighting for all file types
+• Advanced file filtering and search capabilities
+• Regex-based content search across all files
+• Code beautification for minified JavaScript
+• Download extensions as ZIP packages
+• Quick "Jump to Manifest" navigation
+• One-click code copying
+
+📊 Smart Analysis Tools
+• Permission risk assessment with detailed descriptions
+• Content verification with hash calculations (MD5, SHA-1, SHA-256)
+• File type detection and categorization
+• Image, code, and markup filtering
+• Translation file analysis
+
+🎨 Premium User Experience
+• Clean, modern light theme interface
+• Responsive design optimized for productivity
+• Smooth micro-animations and transitions
+• Professional card-based layouts
+• Intuitive keyboard shortcuts
+• GitHub integration for transparency
+
+🛡️ Privacy & Security
+• All processing happens locally in your browser
+• No data collection or external tracking
+• Self-contained operation
+• No external API calls
+
+👨‍💻 PERFECT FOR
+
+• Security researchers analyzing extension safety
+• Developers learning from other extensions
+• Code reviewers performing audits
+• Students studying extension development
+• Anyone curious about how extensions work
+• Teams ensuring compliance and security standards
+
+🚀 HOW TO USE
+
+1. Quick Inspection: Right-click any extension in the Chrome Web Store and select "CodeLens: Inspect Contents"
+2. Security Audit: Click the extension icon and choose "Security Audit" for comprehensive analysis
+3. Download: Save any extension as a ZIP file for offline analysis
+4. Advanced Search: Use powerful regex filters to find specific code patterns
+
+📈 PROFESSIONAL EDITION FEATURES
+
+• Enhanced security intelligence with pattern detection
+• Advanced permission analysis with risk grading
+• Code pattern detection for common vulnerabilities
+• Professional-grade UI/UX with premium design
+• Regular updates and improvements
+• Comprehensive manifest analysis
+
+🔧 TECHNICAL CAPABILITIES
+
+• Supports CRX, XPI, and ZIP formats
+• Works with Chrome, Firefox, Opera, and Edge extensions
+• Handles both packed and unpacked extensions
+• Automatic file type detection
+• Smart content beautification
+• Multi-language syntax highlighting
+• Hash verification for integrity checks
+
+💡 USE CASES
+
+Security Research: Identify potential vulnerabilities or malicious code patterns before installing extensions
+
+Learning: Study well-built extensions to improve your development skills and understand best practices
+
+Code Review: Verify extension behavior and permissions before installation to protect your privacy
+
+Development: Reference implementations and learn from successful extensions in the store
+
+Compliance: Ensure extensions meet your organization's security standards and policies
+
+Auditing: Perform thorough security audits for enterprise deployments
+
+🌟 WHY CHOOSE CODELENS?
+
+Trusted by Developers: Used by security professionals and developers worldwide
+
+Regular Updates: Continuously improved with new features and security enhancements
+
+Professional Quality: Enterprise-grade code analysis with attention to detail
+
+User-Friendly: Intuitive interface designed for all skill levels
+
+Comprehensive: All-in-one solution for extension analysis and security auditing
+
+Open Source: Committed to transparency with public GitHub repository
+
+📝 RECENT UPDATES (v2.1.0)
+
+✅ Enhanced security audit mode with comprehensive analysis
+✅ Improved permission intelligence with risk grading
+✅ Dynamic security scoring system (0-100 scale)
+✅ Recently inspected history tracking
+✅ Premium light theme UI redesign
+✅ Advanced code intelligence features
+✅ One-click code copying functionality
+✅ Quick "Jump to Manifest" navigation
+✅ Improved file filtering and search
+✅ Better syntax highlighting
+
+🔗 OPEN SOURCE & TRANSPARENT
+
+CodeLens is committed to transparency and security. Our code is open source, allowing you to verify exactly what the extension does. Visit our GitHub repository to contribute, report issues, or learn more about how it works.
+
+⚡ GET STARTED TODAY
+
+Install CodeLens now and unlock the power of professional extension analysis. Whether you're securing your browser, learning to code, conducting security research, or ensuring compliance, CodeLens is your essential companion.
+
+🎯 WHAT USERS SAY
+
+"Essential tool for any developer working with browser extensions"
+"The security audit feature is incredibly useful for vetting extensions"
+"Clean interface and powerful features - exactly what I needed"
+"Makes understanding extension code so much easier"
+
+📞 SUPPORT & FEEDBACK
+
+We're committed to providing the best experience. If you have questions, suggestions, or need help:
+• Visit our GitHub repository for documentation
+• Report issues or request features
+• Contribute to the project
+• Join our community of developers
+
+🏆 AWARDS & RECOGNITION
+
+• Featured in developer tool collections
+• Recommended by security researchers
+• Trusted by enterprise teams
+• Highly rated by users worldwide
+
+---
+
+CodeLens - Professional Edition v2.1.0
+Empowering developers and security researchers worldwide
+
+Category: Developer Tools
+Privacy: No data collection, fully local processing
+Support: https://github.com/Subhan-Haider
+
+Install now and experience professional-grade extension analysis!

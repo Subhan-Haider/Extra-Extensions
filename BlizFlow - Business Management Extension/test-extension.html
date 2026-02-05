@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Test Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .test-section {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .test-section h2 {
+      color: #667eea;
+      margin-bottom: 15px;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    .result {
+      margin-top: 10px;
+      padding: 10px;
+      background: #f9fafb;
+      border-radius: 6px;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    .success { color: #10b981; }
+    .error { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <h1>BlizFlow Extension Test Page</h1>
+  <p>Use this page to test if the extension is working properly.</p>
+
+  <div class="test-section">
+    <h2>1. Check Extension Loaded</h2>
+    <button onclick="checkExtension()">Check Extension</button>
+    <div id="extension-check" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>2. Test Storage</h2>
+    <button onclick="testStorage()">Test Storage</button>
+    <div id="storage-test" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>3. Test Message Passing</h2>
+    <button onclick="testMessages()">Test Messages</button>
+    <div id="message-test" class="result"></div>
+  </div>
+
+  <div class="test-section">
+    <h2>4. Test Content Script</h2>
+    <p>If the extension is working, you should see a floating button (⚡) in the bottom right corner.</p>
+    <div id="content-test" class="result">Check for floating button...</div>
+  </div>
+
+  <script>
+    function checkExtension() {
+      const result = document.getElementById('extension-check');
+      if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id) {
+        result.innerHTML = '<span class="success">✓ Extension is loaded!</span>\nExtension ID: ' + chrome.runtime.id;
+      } else {
+        result.innerHTML = '<span class="error">✗ Extension not detected. Make sure you\'re testing from a page where the extension can run.</span>';
+      }
+    }
+
+    function testStorage() {
+      const result = document.getElementById('storage-test');
+      if (typeof chrome !== 'undefined' && chrome.storage) {
+        chrome.storage.local.set({test: 'value', timestamp: Date.now()}, () => {
+          chrome.storage.local.get(['test', 'timestamp'], (items) => {
+            if (items.test === 'value') {
+              result.innerHTML = '<span class="success">✓ Storage is working!</span>\nTest value: ' + items.test + '\nTimestamp: ' + new Date(items.timestamp).toLocaleString();
+            } else {
+              result.innerHTML = '<span class="error">✗ Storage test failed</span>';
+            }
+          });
+        });
+      } else {
+        result.innerHTML = '<span class="error">✗ Storage API not available</span>';
+      }
+    }
+
+    function testMessages() {
+      const result = document.getElementById('message-test');
+      if (typeof chrome !== 'undefined' && chrome.runtime) {
+        chrome.runtime.sendMessage({action: 'getUserData'}, (response) => {
+          if (chrome.runtime.lastError) {
+            result.innerHTML = '<span class="error">✗ Message error: ' + chrome.runtime.lastError.message + '</span>';
+          } else if (response) {
+            result.innerHTML = '<span class="success">✓ Messages are working!</span>\nResponse: ' + JSON.stringify(response, null, 2);
+          } else {
+            result.innerHTML = '<span class="error">✗ No response from extension</span>';
+          }
+        });
+      } else {
+        result.innerHTML = '<span class="error">✗ Runtime API not available</span>';
+      }
+    }
+
+    // Auto-check on load
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const fab = document.getElementById('blizflow-fab');
+        const contentTest = document.getElementById('content-test');
+        if (fab) {
+          contentTest.innerHTML = '<span class="success">✓ Content script is working! Floating button found.</span>';
+        } else {
+          contentTest.innerHTML = '<span class="error">✗ Content script not detected. Floating button not found.</span>';
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
+

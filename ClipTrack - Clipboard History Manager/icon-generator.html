@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Generator - ClipTrack</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #0f172a;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        .icons-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon-wrapper {
+            text-align: center;
+        }
+
+        canvas {
+            border: 2px solid #475569;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        canvas:hover {
+            border-color: #6366f1;
+        }
+
+        button {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .instructions {
+            max-width: 600px;
+            margin-top: 40px;
+            padding: 20px;
+            background: #1e293b;
+            border-radius: 12px;
+            line-height: 1.6;
+        }
+
+        .instructions h2 {
+            margin-bottom: 15px;
+            color: #6366f1;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ClipTrack Icon Generator</h1>
+
+    <div class="icons-container">
+        <div class="icon-wrapper">
+            <canvas id="icon16" width="16" height="16"></canvas>
+            <div>16x16</div>
+            <button onclick="downloadIcon('icon16', 16)">Download</button>
+        </div>
+
+        <div class="icon-wrapper">
+            <canvas id="icon32" width="32" height="32"></canvas>
+            <div>32x32</div>
+            <button onclick="downloadIcon('icon32', 32)">Download</button>
+        </div>
+
+        <div class="icon-wrapper">
+            <canvas id="icon48" width="48" height="48"></canvas>
+            <div>48x48</div>
+            <button onclick="downloadIcon('icon48', 48)">Download</button>
+        </div>
+
+        <div class="icon-wrapper">
+            <canvas id="icon128" width="128" height="128"></canvas>
+            <div>128x128</div>
+            <button onclick="downloadIcon('icon128', 128)">Download</button>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Click the "Download" button under each icon size</li>
+            <li>Save each file with the exact name shown (e.g., "icon16.png")</li>
+            <li>Place all downloaded icons in the "icons" folder of your extension</li>
+            <li>Load the extension in Chrome (chrome://extensions/)</li>
+        </ol>
+        <p><strong>Note:</strong> All four icon sizes are required for the extension to work properly.</p>
+    </div>
+
+    <script>
+        // Draw icon on canvas
+        function drawIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+
+            // Create gradient background
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#6366f1');
+            gradient.addColorStop(1, '#8b5cf6');
+
+            // Fill background with gradient
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            // Draw clipboard shape
+            const scale = size / 128;
+
+            // Clipboard board
+            ctx.fillStyle = 'white';
+            ctx.fillRect(20 * scale, 30 * scale, 88 * scale, 88 * scale);
+
+            // Clipboard clip
+            ctx.fillStyle = '#e2e8f0';
+            ctx.fillRect(45 * scale, 20 * scale, 38 * scale, 15 * scale);
+
+            // Lines representing text/history
+            ctx.fillStyle = '#6366f1';
+            const lineWidth = 60 * scale;
+            const lineHeight = 4 * scale;
+            const lineSpacing = 12 * scale;
+            const startX = 34 * scale;
+            let startY = 50 * scale;
+
+            for (let i = 0; i < 4; i++) {
+                ctx.fillRect(startX, startY, lineWidth, lineHeight);
+                startY += lineSpacing;
+            }
+
+            // Add rounded corners effect
+            ctx.globalCompositeOperation = 'destination-in';
+            ctx.beginPath();
+            ctx.roundRect(0, 0, size, size, size * 0.15);
+            ctx.fill();
+            ctx.globalCompositeOperation = 'source-over';
+        }
+
+        // Download icon
+        function downloadIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = `icon${size}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Draw all icons on load
+        window.onload = function () {
+            drawIcon('icon16', 16);
+            drawIcon('icon32', 32);
+            drawIcon('icon48', 48);
+            drawIcon('icon128', 128);
+        };
+    </script>
+</body>
+
+</html>

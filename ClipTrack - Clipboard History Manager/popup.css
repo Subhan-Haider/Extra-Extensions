@@ -1,0 +1,339 @@
+:root {
+  /* Zenith Noir - Extremely Simple & Ultra-Premium Design */
+  --bg-app: #000000;
+  --bg-card: rgba(18, 18, 20, 0.6);
+  --bg-hover: rgba(255, 255, 255, 0.05);
+
+  --primary: #ffffff;
+  --accent: #00ff9d;
+  /* Pure Emerald highlight */
+
+  --text-active: #ffffff;
+  --text-dim: #a1a1aa;
+  --text-muted: #52525b;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-bright: rgba(255, 255, 255, 0.2);
+
+  --radius-xl: 0px;
+  /* Sharp technical corners */
+  --radius-lg: 0px;
+  --radius-md: 0px;
+
+  --font-main: 'Geist Sans', 'Inter', system-ui, sans-serif;
+  --transition: all 0.2s ease-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 400px;
+  height: 600px;
+  font-family: var(--font-main);
+  background: var(--bg-app) url('assets/bg.png') no-repeat center center / cover;
+  color: var(--text-active);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at top right, rgba(0, 255, 157, 0.05), transparent);
+  backdrop-filter: blur(40px);
+}
+
+/* Precise Header */
+.header {
+  padding: 30px 24px 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-active);
+}
+
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.icon-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: var(--text-dim);
+}
+
+.icon-btn:hover {
+  color: var(--text-active);
+  background: var(--bg-hover);
+}
+
+/* Sharp Search */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  color: var(--text-active);
+  font-size: 13px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  color: var(--text-muted);
+}
+
+/* Technical Tabs */
+.filter-tabs {
+  display: flex;
+  margin-top: 1px;
+}
+
+.filter-tab {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-tab.active {
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent);
+}
+
+.filter-tab:hover:not(.active) {
+  color: var(--text-dim);
+  background: var(--bg-hover);
+}
+
+/* Scrollable List */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.history-item {
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.item-meta {
+  width: 100%;
+}
+
+.item-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.item-time {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.history-item:hover .item-actions {
+  opacity: 1;
+}
+
+.item-action-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.item-action-btn:hover {
+  color: var(--accent);
+}
+
+.item-action-btn.copy-btn {
+  color: var(--text-dim);
+}
+
+.item-action-btn.copy-btn:hover {
+  color: var(--accent);
+}
+
+/* Minimal Footer */
+.footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-info {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.clear-btn {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  text-decoration: underline;
+}
+
+/* Modal technical */
+.modal-content {
+  background: #0c0c0e;
+  border: 1px solid var(--border);
+  padding: 30px;
+  color: white;
+}
+
+.btn-primary {
+  background: var(--accent);
+  border: none;
+  padding: 14px;
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 40px;
+}
+
+.empty-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  opacity: 0.2;
+}
+
+/* Technical Detail */
+.history-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 0;
+  background: var(--accent);
+  transition: var(--transition);
+}
+
+.history-item:hover::before {
+  height: 30%;
+}

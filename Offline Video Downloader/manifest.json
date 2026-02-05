@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Offline Video Downloader",
+  "version": "1.0",
+  "description": "Download videos legally for offline educational use.",
+  "permissions": [
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+}

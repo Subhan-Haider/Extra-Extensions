@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlizFlow Extension Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BlizFlow Extension Settings</h1>
+
+    <!-- Auto-Login Settings -->
+    <div class="section">
+      <h2>Auto-Login</h2>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="autoLogin" />
+          <label for="autoLogin">Enable Auto-Login</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="loginEmail">Email</label>
+        <input type="email" id="loginEmail" placeholder="your@email.com" />
+      </div>
+      <div class="form-group">
+        <label for="loginPassword">Password</label>
+        <input type="password" id="loginPassword" placeholder="Your password" />
+      </div>
+      <button id="saveAutoLoginBtn">Save Credentials</button>
+      <button id="clearCredentialsBtn" style="background: #ef4444;">Clear Credentials</button>
+    </div>
+
+    <!-- Feature Settings -->
+    <div class="section">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+        <div>
+          <h2 style="margin-bottom: 8px;">Features</h2>
+          <p style="color: #64748b; font-size: 14px; margin: 0;">Enable or disable extension features</p>
+        </div>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <input type="text" id="featureSearch" placeholder="🔍 Search features..." style="width: 250px; padding: 10px 14px; font-size: 14px;" />
+          <button type="button" id="expandAllBtn" style="background: #f3f4f6; color: #667eea; border: 1px solid #e2e8f0; padding: 10px 16px; font-size: 12px; text-transform: none; box-shadow: none; margin: 0;">
+            Expand All
+          </button>
+        </div>
+      </div>
+      <div id="featuresList">
+        <!-- Features will be loaded dynamically by category -->
+      </div>
+    </div>
+
+    <!-- Sync Settings -->
+    <div class="section">
+      <h2>Sync Settings</h2>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="autoSync" />
+          <label for="autoSync">Auto-sync every 15 minutes</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="syncInvoices" />
+          <label for="syncInvoices">Sync Invoices</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="syncClients" />
+          <label for="syncClients">Sync Clients</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="syncExpenses" />
+          <label for="syncExpenses">Sync Expenses</label>
+        </div>
+      </div>
+      <button id="saveSyncSettingsBtn">Save Sync Settings</button>
+      <button id="syncNowBtn">Sync Now</button>
+    </div>
+
+    <!-- Notification Settings -->
+    <div class="section">
+      <h2>Notifications</h2>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="enableNotifications" />
+          <label for="enableNotifications">Enable Notifications</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="invoiceNotifications" />
+          <label for="invoiceNotifications">Invoice Notifications</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="reminderNotifications" />
+          <label for="reminderNotifications">Reminder Notifications</label>
+        </div>
+      </div>
+      <button id="saveNotificationSettingsBtn">Save Notification Settings</button>
+    </div>
+
+    <!-- API Settings -->
+    <div class="section">
+      <h2>API Connection</h2>
+      <div class="api-info" style="background: #e0f2fe; padding: 16px; border-radius: 10px; margin-bottom: 20px; border-left: 4px solid #667eea;">
+        <h3 style="margin-bottom: 12px; color: #0369a1; font-size: 16px;">How to Get Your API Key</h3>
+        <ol style="margin-left: 20px; color: #0369a1; line-height: 1.8;">
+          <li>Log in to your BlizFlow account at <a href="https://blizflow.online" target="_blank" style="color: #667eea; text-decoration: underline;">blizflow.online</a></li>
+          <li>Go to <strong>Settings</strong> (click your profile icon → Settings)</li>
+          <li>Navigate to <strong>Security</strong> section</li>
+          <li>Click on <strong>API Keys</strong></li>
+          <li>Click <strong>Create New API Key</strong> or use an existing one</li>
+          <li>Copy the API key (you'll only see it once!)</li>
+          <li>Paste it in the field below</li>
+        </ol>
+        <div style="margin-top: 12px;">
+          <a href="https://blizflow.online/settings/security" target="_blank" style="display: inline-block; background: #667eea; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">
+            🔗 Open API Keys Page
+          </a>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="apiKey">API Key</label>
+        <input type="password" id="apiKey" placeholder="Enter your API key" style="font-family: monospace; font-size: 13px;" />
+        <small style="color: #666; font-size: 12px; display: block; margin-top: 6px;">
+          ⚠️ Keep your API key secure. Never share it publicly.
+        </small>
+        <div style="margin-top: 8px;">
+          <button type="button" id="toggleApiKey" style="background: #f3f4f6; color: #667eea; border: 1px solid #e2e8f0; padding: 6px 12px; border-radius: 6px; font-size: 12px; cursor: pointer;">
+            👁️ Show/Hide Key
+          </button>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="apiUrl">API URL</label>
+        <input type="text" id="apiUrl" value="https://blizflow.online/api" />
+        <small style="color: #666; font-size: 12px; display: block; margin-top: 6px;">
+          Default API endpoint. Only change if using a custom server.
+        </small>
+      </div>
+      <button id="saveAPISettingsBtn">Save API Settings</button>
+      <button id="testConnectionBtn">Test Connection</button>
+    </div>
+
+    <button id="saveAllSettingsBtn" style="background: #10b981; width: 100%; margin-top: 24px;">Save All Settings</button>
+  </div>
+
+  <script type="module" src="options.js"></script>
+</body>
+</html>
+

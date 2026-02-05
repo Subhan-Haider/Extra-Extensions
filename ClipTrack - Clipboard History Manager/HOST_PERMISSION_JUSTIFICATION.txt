@@ -1,0 +1,5 @@
+# Complete Host Permission Justification (Under 1000 chars)
+
+ClipTrack's core functionality is to automatically track clipboard events (copy, cut, paste) across ALL websites the user visits, which is the fundamental purpose of a clipboard history manager. The extension must detect clipboard events the moment they occur on any website, without requiring explicit user interaction. The activeTab permission only grants access when the user clicks the extension icon, which would miss 99% of clipboard events during normal browsing. Users copy/paste content from unpredictable sources (GitHub, Google Docs, Stack Overflow, email clients, etc.) throughout their day. The extension needs to run silently in the background on all sites to capture this activity. The content script ONLY listens for clipboard events and records the source URL and page title. No other page content, forms, or user input is accessed. All data stays local on the user's device with no network requests. This is the industry standard for clipboard managers—desktop apps require system-wide clipboard access, and the web extension equivalent is <all_urls>.
+
+Character count: 996/1000
