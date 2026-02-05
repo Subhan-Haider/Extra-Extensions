@@ -1,80 +1,89 @@
-# Chronos: Visual Context Manager
+<div align="center">
 
-**Version:** 1.0.0
+# ⏰ Chronos - Visual Context Manager
+### *Master your mental bandwidth. Organize your browsing into visual projects and never lose context again.*
 
-## Description
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/search/Subhan%20Extensions)
 
-Organize your workflow into visual projects. Stop losing tabs, start keeping context.
-
-## Features
-
-- Core functionality as described in the extension's single purpose
-- User-friendly interface
-- Secure local data storage
-- Privacy-focused design
-
-## Installation
-
-### From Chrome Web Store
-1. Visit the Chrome Web Store page for Chronos: Visual Context Manager
-2. Click "Add to Chrome"
-3. Confirm the installation
-
-### Manual Installation (Developer Mode)
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked"
-5. Select the extension directory
-
-## Usage
-
-1. Click the extension icon in your browser toolbar
-2. Follow the on-screen instructions
-3. Configure settings as needed in the options page
-
-## Permissions
-
-This extension requires the following permissions:
-
-- **tabs**: Required for core functionality
-- **storage**: Required for core functionality
-- **contextMenus**: Required for core functionality
-- **activeTab**: Required for core functionality
-- **unlimitedStorage**: Required for core functionality
-- **tabGroups**: Required for core functionality
-- **scripting**: Required for core functionality
-
-## Privacy
-
-This extension respects your privacy:
-- No data is sent to external servers without your explicit consent
-- All user data is stored locally on your device
-- No tracking or analytics are performed
-- See our [Privacy Policy](PRIVACY_POLICY.md) for more details
-
-## Security
-
-- All code is open source and can be reviewed
-- No remote code execution
-- Minimal permissions requested
-- Regular security updates
-
-## Support
-
-For issues, questions, or feature requests:
-- Open an issue on our GitHub repository
-- Contact us via email (if applicable)
-
-## License
-
-See [LICENSE](LICENSE) file for details.
-
-## Changelog
-
-### Version 1.0.0
-- Initial release
+[Elite Features](#-elite-features) • [Why Chronos?](#-the-chronos-advantage) • [Installation](#-get-started) • [Privacy](#-privacy--security) • [Developer](#-about-the-developer)
 
 ---
 
-**Note:** This extension is independently developed and not affiliated with any third-party services unless explicitly stated.
+</div>
+
+## 🚀 Stop Losing Tabs. Start Keeping Context.
+
+Between project research, task switching, and daily browsing, our tab bars often become a chaotic graveyard of information. **Chronos** is a professional-grade visual workspace manager that transforms your browser into an organized project hub.
+
+By grouping tabs into **Visual Projects**, Chronos allows you to switch between different work contexts instantly, preserving your mental focus and system resources.
+
+---
+
+## ✨ Elite Features
+
+| Module | Key Capabilities |
+| :--- | :--- |
+| **🖼️ Visual Project Hub** | Create dedicated workspaces for specific tasks, projects, or research topics. |
+| **🔄 Context Switching** | Swap between Entire sets of tabs with a single click. No more manual tab hunting. |
+| **📂 Smart Memory** | Chronos remembers exactly where you left off, even after a browser restart. |
+| **🎨 Glassmorphism UI** | A stunning, high-performance interface that makes organization feel like a luxury experience. |
+| **🔍 Search & Filter** | Quickly find projects or specific tabs within your visual timeline. |
+| **🛡️ System Optimization** | Reduces tab-bloat, saving CPU and RAM by only keeping your active context in focus. |
+
+---
+
+## 💡 The Chronos Advantage
+
+### 🧠 Preserve Your Flow State
+Context switching is the #1 productivity killer. Chronos acts as your "external brain," storing every tab, link, and resource exactly where it belongs so you can pick up exactly where you left off.
+
+### 💼 Professional Workflows
+1.  **Project Launch**: Create a new project for "Q1 Marketing Campaign" or "AI Research".
+2.  **Resource Gathering**: Open all relevant tabs. Chronos automatically associates them with your active context.
+3.  **Visual Switching**: Need to pause research to handle an urgent bug? Switch to your "Development" context instantly, then jump back to "Marketing" when you're done.
+
+---
+
+## 🛠️ Get Started
+
+### 🌐 Official Store (Latest Stable)
+*   **Microsoft Edge**: [**Install Chronos from Edge Add-ons**](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff)
+*   **Chrome Web Store**: [**Browse Subhan Extensions**](https://chromewebstore.google.com/search/Subhan%20Extensions)
+
+### 🏗️ Manual Installation
+1.  Download or clone this repository.
+2.  Open your browser and navigate to the extensions page (`edge://extensions` or `chrome://extensions`).
+3.  Enable **Developer Mode**.
+4.  Click **Load Unpacked** and select the `Chronos Visual Context Manager` folder.
+
+---
+
+## 🔒 Privacy & Security
+
+We take your digital privacy seriously:
+*   ✅ **Local-First Architecture**: Your project data, tab groups, and browsing history stay exclusively on your machine.
+*   ✅ **Zero External Tracking**: Chronos does not call home. We don't track what you research or how you work.
+*   ✅ **Secure Permissions**: We only request `tabs` and `tabGroups` permissions to enable core functionality.
+*   ✅ **No Remote Code**: No external scripts or styles are loaded from 3rd party servers.
+
+---
+
+## 🤝 About the Developer
+
+Crafted with ❤️ by **Subhan Haider**. I build high-impact browser tools designed to solve the complexity of modern digital life.
+
+*   **GitHub**: [@Subhan-Haider](https://github.com/Subhan-Haider)
+*   **Edge Store Portfolio**: [Subhan_Store](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
+
+---
+
+<div align="center">
+
+### 🌟 Mastering your workflow? Star this repo on GitHub! 🌟
+
+[⬆ Back to Top](#-chronos---visual-context-manager)
+
+</div>
