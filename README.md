@@ -346,7 +346,7 @@ Need help? We're here for you!
 
 - 🐛 **Bug Reports**: [Open an issue](https://github.com/Subhan-Haider/Extra-Extensions/issues)
 - 💬 **Questions**: Check individual extension READMEs
-- 📧 **Email**: Contact the extension developer
+- 📧 **Email**: Contact the Subhan Haider
 - 📖 **Documentation**: Comprehensive guides in each extension folder
 
 ---
@@ -388,7 +388,7 @@ Use at your own discretion. While we strive for quality and security, we provide
 
 ### 🌟 If you find these extensions useful, please consider starring the repository!
 
-**Made with ❤️ by Extension Developer**
+**Made with ❤️ by Subhan Haider**
 
 [⬆ Back to Top](#-browser-extensions-collection)
 

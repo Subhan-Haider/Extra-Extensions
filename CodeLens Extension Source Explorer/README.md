@@ -152,7 +152,7 @@ Need help?
 - 🐛 [Report a Bug](https://github.com/Subhan-Haider/Extra-Extensions/issues)
 - 💡 [Request a Feature](https://github.com/Subhan-Haider/Extra-Extensions/issues)
 - 📖 [Read the Docs](CHROME_STORE_LISTING.md)
-- 📧 Contact: Extension Developer
+- 📧 Contact: Subhan Haider
 
 ---
 
@@ -187,7 +187,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ by Extension Developer**
+**Made with ❤️ by Subhan Haider**
 
 If you find this extension useful, please ⭐ star the repository!
 
