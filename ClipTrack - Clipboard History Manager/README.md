@@ -1,78 +1,86 @@
-# ClipTrack - Clipboard History Manager
+<div align="center">
 
-**Version:** 2.0.0
+# 📋 ClipTrack - Clipboard History Manager
+### *Experience the ultimate clipboard productivity suite with style and privacy.*
 
-## Description
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-Advanced clipboard history manager with favorites, tags, export, statistics, and more!
-
-## Features
-
-- Core functionality as described in the extension's single purpose
-- User-friendly interface
-- Secure local data storage
-- Privacy-focused design
-
-## Installation
-
-### From Chrome Web Store
-1. Visit the Chrome Web Store page for ClipTrack - Clipboard History Manager
-2. Click "Add to Chrome"
-3. Confirm the installation
-
-### Manual Installation (Developer Mode)
-1. Download or clone this repository
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked"
-5. Select the extension directory
-
-## Usage
-
-1. Click the extension icon in your browser toolbar
-2. Follow the on-screen instructions
-3. Configure settings as needed in the options page
-
-## Permissions
-
-This extension requires the following permissions:
-
-- **storage**: Required for core functionality
-- **clipboardRead**: Required for core functionality
-- **clipboardWrite**: Required for core functionality
-- **activeTab**: Required for core functionality
-- **downloads**: Required for core functionality
-
-## Privacy
-
-This extension respects your privacy:
-- No data is sent to external servers without your explicit consent
-- All user data is stored locally on your device
-- No tracking or analytics are performed
-- See our [Privacy Policy](PRIVACY_POLICY.md) for more details
-
-## Security
-
-- All code is open source and can be reviewed
-- No remote code execution
-- Minimal permissions requested
-- Regular security updates
-
-## Support
-
-For issues, questions, or feature requests:
-- Open an issue on our GitHub repository
-- Contact us via email (if applicable)
-
-## License
-
-See [LICENSE](LICENSE) file for details.
-
-## Changelog
-
-### Version 2.0.0
-- Initial release
+[Features](#-key-capabilities) • [Installation](#-get-started) • [Usage](#-how-to-use) • [Privacy](#-privacy--security) • [Developer](#-about-the-developer)
 
 ---
 
-**Note:** This extension is independently developed and not affiliated with any third-party services unless explicitly stated.
+</div>
+
+## 🚀 The Premium Clipboard Experience
+
+**ClipTrack** isn't just a clipboard manager; it's a high-performance productivity hub designed for developers, writers, and power users. Built with **Manifest V3** for maximum security and speed, it gives you complete control over your copied content with a stunning **Glassmorphism UI**.
+
+---
+
+## ✨ Key Capabilities
+
+| Feature | Description |
+| :--- | :--- |
+| **⚡ Instant History** | Auto-tracks every Copy (Ctrl+C), Paste (Ctrl+V), and Cut (Ctrl+X). |
+| **🔍 Deep Search** | Find exactly what you need with real-time text matching and type filtering. |
+| **⭐ Favorites & Tags** | Star important clips and categorize them with custom tags for rapid retrieval. |
+| **📊 Smart Insights** | Visualize your productivity with a dashboard showing most-used sites and usage patterns. |
+| **📝 Templates** | Store frequently used snippets as templates and paste them with a single click. |
+| **📂 Pro Export** | Save your history for backup or documentation in **JSON**, **CSV**, or **TXT** formats. |
+
+---
+
+## 🛠️ Get Started
+
+### 🌐 Official Stores (Recommended)
+Get the most stable version with automatic updates:
+*   **Chrome Web Store**: [**ClipTrack - Install Now**](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg)
+*   **Edge Add-ons**: [**Search Subhan_Store**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
+
+### 🏗️ Manual Installation (Developers)
+1. **Clone/Download** this repository.
+2. Go to `chrome://extensions` or `edge://extensions`.
+3. Enable **Developer Mode**.
+4. Click **Load Unpacked** and select this directory.
+
+---
+
+## 📖 How to Use
+
+1. **Copy Normally**: Just use `Ctrl+C`. ClipTrack silently captures every snippet.
+2. **Open Popup**: Use `Ctrl+Shift+V` to summon the dashboard.
+3. **One-Click Paste**: Click any history item to copy it back to your clipboard instantly.
+4. **Organize**: Use the **Star icon** to favorite or the **Tag icon** to categorize.
+5. **Analyze**: Click the **Stats icon** to see your clipboard habits!
+
+---
+
+## 🔒 Privacy & Security
+
+We believe your data belongs to **you**.
+*   ✅ **100% Local Storage**: Your history never leaves your device.
+*   ✅ **Zero Analytics**: No tracking, no cookies, no spying.
+*   ✅ **Minimal Permissions**: We only ask for what's strictly necessary to manage the clipboard.
+*   ✅ **No Remote Code**: No external scripts or fonts are loaded; everything is offline-ready.
+
+---
+
+## 🤝 About the Developer
+
+Crafted with ❤️ by **Subhan Haider**. I build privacy-focused, high-performance tools to make the web more productive for everyone.
+
+*   **GitHub**: [@Subhan-Haider](https://github.com/Subhan-Haider)
+*   **Portfolio**: [Subhan Extensions](https://chromewebstore.google.com/search/Subhan%20Extensions)
+
+---
+
+<div align="center">
+
+### 🌟 Love ClipTrack? Give us a star on GitHub! 🌟
+
+[⬆ Back to Top](#-cliptrack---clipboard-history-manager)
+
+</div>
