@@ -13,7 +13,7 @@
     "alarms"
   ],
   "host_permissions": [
-    "<all_urls>",
+    "*://*/*",
     "https://*/*",
     "http://*/*"
   ],

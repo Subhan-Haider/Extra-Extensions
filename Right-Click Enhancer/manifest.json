@@ -16,5 +16,6 @@
     "32": "icon.svg",
     "48": "icon.svg",
     "128": "icon.svg"
-  }
+  },
+  "action": {}
 }
