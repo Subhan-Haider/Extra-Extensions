@@ -1,185 +1,86 @@
 <div align="center">
 
-# GhostType AI
+# 👻 GhostType AI
+### *The ultimate undetectable AI typing engine. Master high-speed automation with human-like precision.*
 
-![Version](https://img.shields.io/badge/version-4.0-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-4.0.0-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-**The ultimate undetectable AI typing engine. Perfect for bypass and high-speed automation.**
+[Key Features](#-key-features) • [Human Simulation](#-advanced-human-simulation) • [Installation](#-get-started) • [Privacy](#-privacy--security) • [Developer](#-about-the-developer)
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Permissions](#-permissions) • [Privacy](#-privacy)
+---
 
 </div>
 
----
+## 🚀 The Invisible Force in Automation
 
-## ✨ Features
+**GhostType AI** is the premium choice for developers, QA testers, and automation enthusiasts who require high-speed typing that is indistinguishable from human activity. By combining advanced AI with a specialized "Ghost Engine," this extension simulates natural keystroke dynamics, bypassing even the most sophisticated typing speed tests and anti-bot algorithms.
 
-🤖 **AI-Powered** - Advanced text processing
-⚡ **Real-Time** - Instant results
-🎚️ **Adjustable** - Control intensity
-🔒 **Private** - Local processing
-🎯 **Accurate** - High-quality output
+Whether you're automating data entry, stress-testing input fields, or refining AI-generated content, **GhostType AI** puts professional-grade automation in your toolbar.
 
 ---
 
-## 🚀 Installation
+## ✨ Key Features
 
-### Option 1: Chrome Web Store (Recommended)
-*Coming soon - This extension will be available on the Chrome Web Store*
-
-### Option 2: Manual Installation
-
-1. **Download the Extension**
-   - Clone this repository or download as ZIP
-   - Extract to a folder on your computer
-
-2. **Open Chrome Extensions**
-   - Navigate to `chrome://extensions/`
-   - Or click Menu → More Tools → Extensions
-
-3. **Enable Developer Mode**
-   - Toggle the "Developer mode" switch in the top-right corner
-
-4. **Load the Extension**
-   - Click "Load unpacked"
-   - Select the `GhostType AI` folder
-   - The extension icon will appear in your toolbar
-
-5. **Pin the Extension** (Optional)
-   - Click the puzzle piece icon in the toolbar
-   - Find "GhostType AI"
-   - Click the pin icon to keep it visible
+| Feature | Description |
+| :--- | :--- |
+| **👻 Ghost Engine** | Proprietary algorithm that simulates varying keystroke intervals for 100% undetectability. |
+| **⚡ Nitro Mode** | Achieve speeds from a natural 40 WPM to a staggering **300+ WPM** for high-speed tasks. |
+| **🧠 AI Smart-Fix** | Automatically refines broken or fragmented text into coherent, flowing paragraphs before typing. |
+| **✨ Magic Flow** | Instant text collection and refinement—just paste your source and let the AI handle the rest. |
+| **🔄 Auto-Loop** | Seamlessly repeat typing tasks for stress-testing and long-running automation workflows. |
+| **🎨 Glassmorphism UI** | A state-of-the-art interface that provides a premium experience in both light and dark modes. |
 
 ---
 
-## 📖 Usage
+## 🎭 Advanced Human Simulation
 
-### Getting Started
-
-1. **Open the Extension**
-   - Click the extension icon in your toolbar
-
-2. **Follow the Interface**
-   - The extension provides an intuitive interface
-   - Follow on-screen instructions
-
-3. **Configure Settings** (Optional)
-   - Right-click the extension icon
-   - Select "Options" to customize
-
-### Tips
-
-- 💡 Explore all features in the options page
-- 💡 Check for updates regularly
-- 💡 Report any issues on GitHub
+GhostType AI doesn't just "dump" text. It *performs* it.
+*   **Variable Latency**: Dynamically adjusts the time between every single character, mimicking the natural rhythm of human fingers.
+*   **Intentional Typos**: Introduces realistic mistakes and instant backspacing corrections to appear perfectly human.
+*   **Contextual Pausing**: Simulates the brief pauses a human makes when thinking or moving to a new paragraph.
 
 ---
 
-## 🔑 Permissions
+## 🛠️ Get Started
 
-This extension requires the following permissions to function:
+### 🌐 Official Stores (Recommended)
+Get the latest stable build with automatic updates:
+*   **Chrome Web Store**: [**Get GhostType AI for Chrome**](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk)
+*   **Edge Add-ons**: [**Search Subhan_Store**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-### `scripting`
-Inject scripts to modify page content
-
-### `activeTab`
-Access the current tab when you click the extension icon
-
-### `storage`
-Save your preferences and settings locally
-
-### Host Permissions
-
-- **`https://openrouter.ai/*`** - Required to access and modify content on these pages
-- **`https://api.textsynth.com/*`** - Required to access and modify content on these pages
-- **`https://api-inference.huggingface.co/*`** - Required to access and modify content on these pages
+### 🏗️ Manual Installation
+1.  Download or clone this repository.
+2.  Navigate to `chrome://extensions` or `edge://extensions`.
+3.  Enable **Developer Mode**.
+4.  Click **Load Unpacked** and select the `GhostType AI` folder.
 
 ---
 
-## 🔒 Privacy
+## 🔒 Privacy & Security
 
-Your privacy is our priority:
-
-- ✅ **No Data Collection** - We don't collect any personal information
-- ✅ **Local Storage Only** - All data stays on your device
-- ✅ **No Tracking** - No analytics or tracking scripts
-- ✅ **No External Servers** - No data sent to third parties
-- ✅ **Open Source** - Code is transparent and reviewable
-
-For complete details, see our [Privacy Policy](PRIVACY_COMPLIANCE.md).
+Automation requires trust. GhostType AI is built with a **Privacy-First** architecture:
+*   ✅ **Local Processing**: Your AI keys and text snippets stay on your device.
+*   ✅ **Zero Tracking**: We do not collect analytics on what you type or where you use the extension.
+*   ✅ **Secure API Integrations**: Direct connections to OpenRouter, TextSynth, and HuggingFace with no middleman.
+*   ✅ **Open Transparency**: Full source code and [Privacy Policy](PRIVACY_POLICY.md) available for peer review.
 
 ---
 
-## 🛡️ Security
+## 🤝 About the Developer
 
-- 🔒 **No Remote Code** - All code is packaged with the extension
-- 🔒 **Regular Updates** - Security patches and improvements
-- 🔒 **Minimal Permissions** - Only requests what's necessary
-- 🔒 **Open Source** - Full transparency
+Crafted with ❤️ by **Subhan Haider**. I specialize in creating undetectable automation tools and high-performance browser extensions.
 
-Report security issues: See [SECURITY.md](SECURITY.md)
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📞 Support
-
-Need help?
-
-- 🐛 [Report a Bug](https://github.com/Subhan-Haider/Extra-Extensions/issues)
-- 💡 [Request a Feature](https://github.com/Subhan-Haider/Extra-Extensions/issues)
-- 📖 [Read the Docs](CHROME_STORE_LISTING.md)
-- 📧 Contact: Extension Developer
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**What this means:**
-- ✅ Commercial use allowed
-- ✅ Modification allowed
-- ✅ Distribution allowed
-- ✅ Private use allowed
-
----
-
-## 📝 Changelog
-
-### Version 4.0
-- Initial release
-- Core functionality implemented
-- Privacy-focused design
-
----
-
-## 🙏 Acknowledgments
-
-- Built with modern web technologies
-- Inspired by the need for privacy-focused browser tools
-- Thanks to all contributors and users
+*   **GitHub**: [@Subhan-Haider](https://github.com/Subhan-Haider)
+*   **Portfolio**: [Subhan Extensions Portfolio](https://chromewebstore.google.com/search/Subhan%20Extensions)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by Extension Developer**
-
-If you find this extension useful, please ⭐ star the repository!
+### 🌟 Mastering automation? Star this repo on GitHub! 🌟
 
 [⬆ Back to Top](#-ghosttype-ai)
 

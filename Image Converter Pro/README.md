@@ -84,6 +84,7 @@ We believe your images are your business:
 *   ✅ **Offline-Ready**: Works perfectly without an internet connection.
 *   ✅ **Safe Content Handling**: Handles CORS and cross-origin images securely via official Chrome APIs.
 *   ✅ **No Tracking**: No telemetry, no analytics, no cookies.
+*   ✅ **Complete Transparency**: Review our full [Privacy Policy](PRIVACY_POLICY.md).
 
 ---
 

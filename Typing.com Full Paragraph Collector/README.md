@@ -70,6 +70,7 @@ This tool is built on the principle of **Data Sovereignty**:
 *   ✅ **No Data Exfiltration**: We do not send the collected paragraphs to any server. They stay in your browser.
 *   ✅ **No Account Required**: Use it immediately without signing up for anything.
 *   ✅ **MIT Licensed**: Open-source transparency you can trust.
+*   ✅ **Legal**: Detailed [Privacy Policy](PRIVACY_POLICY.md) available.
 
 ---
 

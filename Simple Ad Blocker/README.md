@@ -71,7 +71,7 @@ Your privacy is our mission. Unlike some "free" ad blockers that sell your data 
 *   ✅ **No User Profiles**: We don't know who you are or what sites you visit.
 *   ✅ **100% Local Processing**: All blocking and statistics are handled on your machine.
 *   ✅ **No "Paid Whitelists"**: We do not accept payments from companies to let their ads through.
-*   ✅ **Open Transparency**: Our source code is fully available for security audits.
+*   ✅ **Open Transparency**: Our source code and [Privacy Policy](PRIVACY_POLICY.md) are fully available for security audits.
 
 ---
 

@@ -82,6 +82,7 @@ We believe your history is private. Unlike cloud-based clipboard syncers, ClipTr
 *   🚫 **No Analytics**: We don't track what you COPY, WHERE you copy, or WHO you are.
 *   🚫 **No External Calls**: The extension doesn't connect to any remote servers or APIs.
 *   ✅ **User-Controlled**: One-click "Clear All" permanently wipes your local history.
+*   ✅ **Legal**: View our [Privacy Policy](PRIVACY_POLICY.md).
 
 ---
 

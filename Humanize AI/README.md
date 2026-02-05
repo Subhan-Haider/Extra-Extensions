@@ -66,6 +66,7 @@ Your content is your intellectual property.
 *   ✅ **No Data Mining**: We do not store your original or humanized text on our servers.
 *   ✅ **Local Options**: Your settings and preferences are stored 100% locally on your device.
 *   ✅ **Transparent Permissions**: We only request `sidePanel` and `storage` to provide the best user experience.
+*   ✅ **Full Disclosure**: Read our [Privacy Policy](PRIVACY_POLICY.md).
 
 ---
 

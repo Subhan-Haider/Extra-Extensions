@@ -72,6 +72,7 @@ We treat your business data with the highest level of respect:
 *   ✅ **Encrypted Storage**: Credentials and API keys are protected using AES-256 equivalent local encryption.
 *   ✅ **No Remote Code**: No external scripts or fonts are fetched, preventing supply-chain attacks.
 *   ✅ **Zero Analytics**: We don't track your business volume, client names, or usage patterns.
+*   ✅ **Full Disclosure**: Read our [Privacy Policy](PRIVACY_POLICY.md) for more details.
 
 ---
 

@@ -68,6 +68,7 @@ We take your digital privacy seriously:
 *   ✅ **Zero External Tracking**: Chronos does not call home. We don't track what you research or how you work.
 *   ✅ **Secure Permissions**: We only request `tabs` and `tabGroups` permissions to enable core functionality.
 *   ✅ **No Remote Code**: No external scripts or styles are loaded from 3rd party servers.
+*   ✅ **Policy**: Detailed [Privacy Policy](PRIVACY_POLICY.md) available.
 
 ---
 
