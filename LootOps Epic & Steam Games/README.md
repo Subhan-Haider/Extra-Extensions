@@ -1,185 +1,102 @@
 <div align="center">
 
-# LootOps: Epic & Steam Games
+# 🎮 LootOps: Epic & Steam Games
+### *Tactical HUD for free games. Never miss a luxury loot drop again.*
 
-![Version](https://img.shields.io/badge/version-1.0.9-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg)
+[![Version](https://img.shields.io/badge/version-1.0.9-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
+[![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/search/Subhan%20Extensions)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-**Tactical HUD for free games. LootOps tracks every free loot drop from Epic Games and Steam.**
+[Elite Features](#-elite-features) • [Installation](#-get-started) • [Tactical Workflow](#-tactical-workflow) • [Privacy Assurance](#-privacy--security) • [Developer](#-about-the-developer)
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Permissions](#-permissions) • [Privacy](#-privacy)
+---
 
 </div>
 
----
+## 🚀 Your Personal Free Game Radar
 
-## ✨ Features
+**LootOps** is a high-performance "Tactical HUD" for gamers who want to build an elite library without spending a dime. It actively monitors the **Epic Games Store** and **Steam** for limited-time free game drops, ensuring you're the first to know when luxury loot is available.
 
-🎮 **Game Deals** - Track best prices
-💰 **Price Alerts** - Get notified
-📊 **Comparison** - Compare stores
-⭐ **Wishlist** - Save favorites
-🔔 **Notifications** - Never miss a deal
+Equipped with a background "Service Worker" and real-time "Alarms," LootOps does the surveillance for you so you can focus on playing, not searching.
 
 ---
 
-## 🚀 Installation
+## ✨ Elite Features
 
-### Option 1: Chrome Web Store (Recommended)
-*Coming soon - This extension will be available on the Chrome Web Store*
-
-### Option 2: Manual Installation
-
-1. **Download the Extension**
-   - Clone this repository or download as ZIP
-   - Extract to a folder on your computer
-
-2. **Open Chrome Extensions**
-   - Navigate to `chrome://extensions/`
-   - Or click Menu → More Tools → Extensions
-
-3. **Enable Developer Mode**
-   - Toggle the "Developer mode" switch in the top-right corner
-
-4. **Load the Extension**
-   - Click "Load unpacked"
-   - Select the `LootOps Epic & Steam Games` folder
-   - The extension icon will appear in your toolbar
-
-5. **Pin the Extension** (Optional)
-   - Click the puzzle piece icon in the toolbar
-   - Find "LootOps: Epic & Steam Games"
-   - Click the pin icon to keep it visible
+| Module | Key Capabilities |
+| :--- | :--- |
+| **🛡️ Drop Detection** | Automated scanning of Epic Games' backend and Steam's free inventory. |
+| **🚨 Tactical Notifications** | Receive instant browser alerts the second a new free game goes live. |
+| **⏲️ Silent Alarms** | Periodically checks for updates in the background without affecting browser speed. |
+| **📋 Loot Summary** | View a curated list of active and upcoming free games directly in the popup. |
+| **🎨 Cybernetic UI** | A dark-themed, tactical interface with glassmorphism elements and smooth transitions. |
+| **🔒 Local Vault** | Remembers which games you've seen and notified about—all stored locally. |
 
 ---
 
-## 📖 Usage
+## 📖 Tactical Workflow
 
-### Getting Started
+### 🛰️ Setting Up Surveillance
+1.  **Install & Pin**: Add LootOps to your toolbar for immediate access.
+2.  **Toggle Alerts**: Ensure notifications are enabled in your browser settings.
+3.  **Relax**: LootOps scans every couple of hours. When a game like *Death Stranding* or *GTA V* goes free, your screen will light up.
 
-1. **Open the Extension**
-   - Click the extension icon in your toolbar
-
-2. **Follow the Interface**
-   - The extension provides an intuitive interface
-   - Follow on-screen instructions
-
-3. **Configure Settings** (Optional)
-   - Right-click the extension icon
-   - Select "Options" to customize
-
-### Tips
-
-- 💡 Explore all features in the options page
-- 💡 Check for updates regularly
-- 💡 Report any issues on GitHub
+### 🎮 Claiming Your Loot
+1.  Click the notification to jump directly to the store page.
+2.  Use the **Loot Summary** to see what's coming next week so you can plan your gaming schedule.
+3.  Filter between **Epic** and **Steam** to prioritize your preferred platform.
 
 ---
 
-## 🔑 Permissions
+## 🛠️ Get Started
 
-This extension requires the following permissions to function:
+### 🌐 Official Stores (Recommended)
+Get the most stable build with automatic background updates:
+*   **Chrome Web Store**: [**Get LootOps for Chrome**](https://chromewebstore.google.com/search/Subhan%20Extensions)
+*   **Edge Add-ons**: [**Search Subhan_Store**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-### `alarms`
-Schedule periodic tasks
-
-### `notifications`
-Show notifications for important events
-
-### `storage`
-Save your preferences and settings locally
-
-### Host Permissions
-
-- **`https://store-site-backend-static-ipv4.ak.epicgames.com/`** - Required to access and modify content on these pages
-- **`https://store.steampowered.com/*`** - Required to access and modify content on these pages
+### 🏗️ Manual Installation (Developers)
+1.  Download or clone this repository.
+2.  Navigate to `chrome://extensions` or `edge://extensions`.
+3.  Enable **Developer Mode**.
+4.  Click **Load Unpacked** and select the `LootOps Epic & Steam Games` folder.
 
 ---
 
-## 🔒 Privacy
+## 🔒 Privacy & Security
 
-Your privacy is our priority:
-
-- ✅ **No Data Collection** - We don't collect any personal information
-- ✅ **Local Storage Only** - All data stays on your device
-- ✅ **No Tracking** - No analytics or tracking scripts
-- ✅ **No External Servers** - No data sent to third parties
-- ✅ **Open Source** - Code is transparent and reviewable
-
-For complete details, see our [Privacy Policy](PRIVACY_COMPLIANCE.md).
+In the world of gaming, your account is your fortress.
+*   ✅ **Zero Login Required**: LootOps tracks general store data—it never asks for your Steam or Epic credentials.
+*   ✅ **Offline-First Storage**: Your notification history and preferences are stored only on your machine.
+*   ✅ **Minimal Permissions**: We only request `alarms`, `notifications`, and `storage` (and specific host access to store backends).
+*   ✅ **No External Tracking**: No analytics, no spying on your library, no cookies.
+*   ✅ **Legal**: View our full [Privacy Policy](PRIVACY_POLICY.md).
 
 ---
 
-## 🛡️ Security
+## 🤝 Project Roadmap
 
-- 🔒 **No Remote Code** - All code is packaged with the extension
-- 🔒 **Regular Updates** - Security patches and improvements
-- 🔒 **Minimal Permissions** - Only requests what's necessary
-- 🔒 **Open Source** - Full transparency
-
-Report security issues: See [SECURITY.md](SECURITY.md)
+We're tactical about our future:
+- [ ] **GOG Integration**: Tracking free drops on Good Old Games.
+- [ ] **Wishlist Alerts**: Notify you if a game on your personal whitelist hits $0.00.
+- [ ] **Discord Integration**: Send drop alerts directly to your private Discord server.
 
 ---
 
-## 🤝 Contributing
+## 🤝 About the Developer
 
-Contributions are welcome! Here's how:
+Authored with passion by **Subhan Haider**. I build tools that help gamers maximize their digital lifestyle with minimal effort.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📞 Support
-
-Need help?
-
-- 🐛 [Report a Bug](https://github.com/Subhan-Haider/Extra-Extensions/issues)
-- 💡 [Request a Feature](https://github.com/Subhan-Haider/Extra-Extensions/issues)
-- 📖 [Read the Docs](CHROME_STORE_LISTING.md)
-- 📧 Contact: Extension Developer
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-**What this means:**
-- ✅ Commercial use allowed
-- ✅ Modification allowed
-- ✅ Distribution allowed
-- ✅ Private use allowed
-
----
-
-## 📝 Changelog
-
-### Version 1.0.9
-- Initial release
-- Core functionality implemented
-- Privacy-focused design
-
----
-
-## 🙏 Acknowledgments
-
-- Built with modern web technologies
-- Inspired by the need for privacy-focused browser tools
-- Thanks to all contributors and users
+*   **GitHub**: [@Subhan-Haider](https://github.com/Subhan-Haider)
+*   **Edge Store Portfolio**: [Subhan_Store](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
 ---
 
 <div align="center">
 
-**Made with ❤️ by Extension Developer**
+### 🌟 Building an elite library? Star us on GitHub! 🌟
 
-If you find this extension useful, please ⭐ star the repository!
-
-[⬆ Back to Top](#-lootops:-epic-&-steam-games)
+[⬆ Back to Top](#-lootops-epic--steam-games)
 
 </div>

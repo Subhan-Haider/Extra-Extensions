@@ -1,35 +1,29 @@
-# Privacy Policy for LootOps
+# Privacy Policy for LootOps: Epic & Steam Games
 
-**Last Updated: January 2026**
+**Effective Date: February 5, 2026**
 
-## 1. Introduction
-LootOps ("we", "our", or "the extension") is a browser extension dedicated to helping users find free video games on the Epic Games Store and Steam. We are committed to protecting your privacy. This policy explains that we do **not** collect, store, or share any of your personal data.
+At **LootOps**, we respect your privacy as much as your gaming library. This policy explains how we handle your data.
 
-## 2. No Data Collection
-LootOps is built with a "Privacy First" architecture.
-*   **We do not collect personal information**: We do not know your name, email, IP address, or location.
-*   **We do not track browsing history**: The extension only interacts with specific game store URLs (`store.epicgames.com` and `store.steampowered.com`) solely to identify free game promotions. It does not monitor your activity on any other websites.
-*   **We do not use analytics**: There are no third-party tracking scripts (e.g., Google Analytics, Mixpanel) embedded in the extension.
+## 1. Zero Data Collection
+**LootOps** is a surveillance tool for free games, not your personal data.
+*   **No Personal Information**: We do not collect names, email addresses, or gaming account credentials (Steam/Epic).
+*   **No Tracking**: We do not track which games you've already claimed or your personal wishlist.
+*   **No External Analytics**: We do not use Google Analytics or any 3rd party tracking pixels.
 
-## 3. Local Storage Usage
-LootOps uses your browser's local storage API (`chrome.storage.local`) strictly for functional purposes:
-*   **Preferences:** To remember your settings (e.g., Dark Mode vs. Light Mode, Notification preferences).
-*   **Cache:** To temporarily store the list of free games so the extension loads faster.
+## 2. Local-Only Storage
+All extension settings, including your notification history (to prevent duplicate alerts) and theme preferences, are stored locally on your device using the `chrome.storage.local` API. This data stays on your machine and is destroyed if you uninstall the extension.
 
-This data never leaves your device and is deleted if you uninstall the extension.
+## 3. Permissions & Justification
+*   `alarms`: Used to trigger periodic background checks for new free game drops.
+*   `notifications`: Used to alert you when a free game is detected.
+*   `storage`: Required to save settings and tracking state locally.
+*   `host_permissions`: Required solely to communicate with the official public backends of Epic Games and Steam to check for pricing updates.
 
-## 4. Permissions Usage
-*   **Alarms:** Used only to schedule background checks for new games.
-*   **Notifications:** Used only to alert you when a new free game is found.
-*   **Host Permissions:** Used strictly to fetch public pricing data from Epic Games and Steam.
+## 4. Third-Party Services
+LootOps communicates with the publicly accessible store backends of **Epic Games** and **Steam**. We do not send any of your personal data to these services; we only fetch the current list of free titles.
 
-## 5. Third-Party Services
-The extension communicates directly with:
-*   **Epic Games Store API**: To fetch public game data.
-*   **Steam Store**: To check for public discounts.
-
-These requests are standard HTTP requests and are subject to the respective privacy policies of Epic Games and Valve Corporation. LootOps does not send any user-identifiable data to these services.
+## 5. Security
+The extension is open-source and reviewable. We do not use remote code execution to ensure your browser remains a secure environment.
 
 ## 6. Contact
-If you have questions about this policy, please open an issue on our GitHub repository:
-https://github.com/Subhan-Haider/LootOps
+If you have questions about our privacy practices, please open an issue on our [GitHub Repository](https://github.com/Subhan-Haider/Extra-Extensions).
