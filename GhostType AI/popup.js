@@ -1,5 +1,5 @@
 // Constants & State
-const STORAGE_KEYS = ["wpm", "accuracy", "loop", "para1", "enable1", "theme", "delay_between", "presets", "device_type"];
+const STORAGE_KEYS = ["wpm", "accuracy", "loop", "para1", "enable1", "theme", "delay_between", "presets", "device_type", "openrouter_key"];
 const DEFAULT_SETTINGS = {
   wpm: 200,
   accuracy: 95,
@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("enable1").checked = s.enable1 || DEFAULT_SETTINGS.enable1;
   document.getElementById("delay_between").value = s.delay_between || DEFAULT_SETTINGS.delay_between;
   document.getElementById("device_type").value = s.device_type || DEFAULT_SETTINGS.device_type;
+  document.getElementById("openrouter_key").value = s.openrouter_key || "";
 
   updateCharCount(1);
   loadPresets(s.presets || {});
@@ -42,6 +43,12 @@ document.getElementById("theme-toggle").addEventListener("click", async () => {
   const isLight = document.body.classList.toggle("light-mode");
   await chrome.storage.local.set({ theme: isLight ? "light" : "dark" });
   updateThemeIcon(isLight);
+});
+
+// Toggle API Key Visibility
+document.getElementById("toggle-key").addEventListener("click", () => {
+  const input = document.getElementById("openrouter_key");
+  input.type = input.type === "password" ? "text" : "password";
 });
 
 // Settings Persistence
@@ -364,7 +371,13 @@ async function aiCorrectText(text, onProgress, customPrompt) {
   } catch (e) { }
 
   // Switch Chain Layer 4: OpenRouter MEGA-FALLBACK (2026 Edition)
-  const KEY = "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";
+  const s = await chrome.storage.local.get("openrouter_key");
+  const KEY = s.openrouter_key || "";
+
+  if (!KEY) {
+    if (onProgress) onProgress("No API Key...");
+    return ghostHeuristic(text);
+  }
   const MODELS = [
     "xiaomi/mimo-v2-flash:free",
     "deepseek/deepseek-r1:free",
@@ -411,7 +424,8 @@ function getCurrentUISettings() {
     para1: document.getElementById("para1").value,
     enable1: document.getElementById("enable1").checked,
     delay_between: parseInt(document.getElementById("delay_between").value),
-    device_type: document.getElementById("device_type").value
+    device_type: document.getElementById("device_type").value,
+    openrouter_key: document.getElementById("openrouter_key").value
   };
 }
 function updateCharCount(num) {
