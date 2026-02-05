@@ -1,394 +1,236 @@
 <div align="center">
 
 # 🚀 Browser Extensions Collection
+### *A curated suite of high-performance, privacy-focused extensions for Chrome & Edge.*
 
-### *A curated collection of powerful browser extensions for Chrome & Edge*
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Extensions](https://img.shields.io/badge/Extensions-12-blue.svg?style=for-the-badge)]()
+[![Chrome](https://img.shields.io/badge/Chrome-Compatible-green.svg?style=for-the-badge)](https://chromewebstore.google.com/search/Subhan%20Extensions)
+[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Extensions](https://img.shields.io/badge/Extensions-12-blue.svg)]()
-[![Chrome](https://img.shields.io/badge/Chrome-Compatible-green.svg)](https://chromewebstore.google.com/search/Subhan%20Extensions)
-[![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg)](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
+**Enhance your browsing experience with tactical productivity tools, AI-powered assistants, and mission-critical utilities.**
 
-**Enhance your browsing experience with productivity tools, AI assistants, and utility extensions**
-
-[Features](#-features) • [Extensions](#-extensions) • [Installation](#-installation) • [Documentation](#-documentation) • [Contributing](#-contributing)
+[Features](#-key-features) • [The Collection](#-the-extension-suite) • [Installation](#-get-started) • [Documentation](#-documentation) • [Contributing](#-join-the-mission)
 
 ---
 
 </div>
 
-## ✨ Features
+## ✨ Key Features
 
-🎯 **12 Unique Extensions** - Each serving a specific purpose to boost your productivity  
-🔒 **Privacy First** - No data collection, all processing happens locally  
-⚡ **Lightweight** - Minimal resource usage, maximum performance  
-📚 **Well Documented** - Comprehensive guides for each extension  
-🛡️ **Secure** - Open source code, regular security updates  
-🆓 **Free & Open Source** - MIT licensed for personal and commercial use
+*   🎯 **12 Unique Proof-of-Concepts** - Each serving a specific, narrow purpose to boost your digital productivity.
+*   🔒 **Privacy First Architecture** - No data collection, zero cloud syncing. All processing happens 100% locally on your machine.
+*   ⚡ **Lightweight & Efficient** - Built with modern JavaScript and Manifest V3 for minimal resource footprint.
+*   📚 **Enterprise Documentation** - Every extension includes comprehensive guides, security policies, and store compliance forms.
+*   🛡️ **Security Focused** - Open source code available for peer review with regular security audits and updates.
+*   🆓 **Fully Open Source** - MIT licensed for personal, educational, and commercial use.
 
 ---
 
-## 🎨 Extensions
+## 🎨 The Extension Suite
 
 ### 💼 Productivity & Business
-
 <table>
-<tr>
-<td width="50%">
-
-#### [📊 BlizFlow - Business Management Extension](https://chromewebstore.google.com/search/Subhan%20Extensions)
-**Streamline your business operations**
-
-- Invoice management
-- Client tracking
-- Expense monitoring
-- Business automation tools
-- Secure API integration
-
-</td>
-<td width="50%">
-
-#### [📋 ClipTrack - Clipboard History Manager](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg)
-**Never lose your clipboard content again**
-
-- Unlimited clipboard history
-- Search and filter clips
-- Organize with categories
-- Quick paste shortcuts
-- Sync across devices
-
-</td>
-</tr>
-
-<tr>
-<td width="50%">
-
-#### [⏰ Chronos Visual Context Manager](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff)
-**Manage your visual context efficiently**
-
-- Visual timeline tracking
-- Context switching made easy
-- Workspace organization
-- Quick navigation
-- Productivity insights
-
-</td>
-<td width="50%">
-
-#### [📝 Smart Paste](https://chromewebstore.google.com/detail/smart-paste/gmjbokljijbegndgfhbmobaniejnaali)
-**Intelligent clipboard pasting**
-
-- Format-aware pasting
-- Auto-formatting
-- Template support
-- Quick snippets
-- Keyboard shortcuts
-
-</td>
-</tr>
+  <tr>
+    <td width="50%">
+      <h4>📊 BlizFlow - Business Suite</h4>
+      <em>Streamline your operations</em>
+      <ul>
+        <li>Invoice & CRM management</li>
+        <li>Client & Expense monitoring</li>
+        <li>Business automation tools</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>📋 ClipTrack - History Manager</h4>
+      <em>Never lose a copy again</em>
+      <ul>
+        <li>Unlimited clipboard history</li>
+        <li>Search, filter, and categories</li>
+        <li>One-click quick paste</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h4>⏰ Chronos Visual Context</h4>
+      <em>Master your research flow</em>
+      <ul>
+        <li>Visual timeline tracking</li>
+        <li>Workspace organization</li>
+        <li>Context switching made easy</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>📝 Smart Paste</h4>
+      <em>Intelligent humanized inputs</em>
+      <ul>
+        <li>Format-aware pasting</li>
+        <li>Human-like typing simulation</li>
+        <li>Template & Snippet support</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 ### 🤖 AI-Powered Tools
-
 <table>
-<tr>
-<td width="50%">
-
-#### [🧠 Humanize AI](https://chromewebstore.google.com/search/Subhan%20Extensions)
-**Make AI text sound naturally human**
-
-- Advanced text humanization
-- Multiple AI detectors support
-- Adjustable intensity
-- Real-time processing
-- Privacy-focused (local processing)
-
-</td>
-<td width="50%">
-
-#### [👻 GhostType AI](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk)
-**AI-powered typing assistance**
-
-- Smart auto-completion
-- Context-aware suggestions
-- Grammar and style improvements
-- Multiple language support
-- Learning from your style
-
-</td>
-</tr>
+  <tr>
+    <td width="50%">
+      <h4>🧠 Humanize AI</h4>
+      <em>Make AI text sound human</em>
+      <ul>
+        <li>Advanced text re-phrasing</li>
+        <li>Bypass popular AI detectors</li>
+        <li>Privacy-focused processing</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>👻 GhostType AI</h4>
+      <em>Undetectable automation</em>
+      <ul>
+        <li>High-speed human simulation</li>
+        <li>Context-aware typing logic</li>
+        <li>Bypass anti-bot systems</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
-### 🛠️ Developer Tools
-
+### 🛠️ Developer & Practice Tools
 <table>
-<tr>
-<td width="50%">
-
-#### [🔍 CodeLens Extension Source Explorer](https://microsoftedge.microsoft.com/addons/detail/codelens-extension-sourc/dmgopgfalpffbbkfnjmmaophkkedaclg)
-**Explore and analyze source code**
-
-- Source code inspection
-- Dependency visualization
-- Code search and navigation
-- Performance analysis
-- Developer-friendly interface
-
-</td>
-<td width="50%">
-
-#### [⌨️ Typing.com Full Paragraph Collector](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf)
-**Enhance your typing practice**
-
-- Collect typing paragraphs
-- Practice material organization
-- Progress tracking
-- Custom exercises
-- Export functionality
-
-</td>
-</tr>
+  <tr>
+    <td width="50%">
+      <h4>🔍 CodeLens Explorer</h4>
+      <em>Inspect extension source</em>
+      <ul>
+        <li>Visual dependency mapping</li>
+        <li>Direct code inspection</li>
+        <li>Developer-friendly UI</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>⌨️ Typing.com Collector</h4>
+      <em>Master your practice</em>
+      <ul>
+        <li>Paragraph reconstruction</li>
+        <li>Contextual flow analysis</li>
+        <li>Practice material export</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 ### 🎮 Entertainment & Media
-
 <table>
-<tr>
-<td width="50%">
-
-#### [🎮 LootOps Epic & Steam Games](https://chromewebstore.google.com/detail/lootops-epic-steam-games/ghghcceghdbplljhoagblgbfepepfbcl)
-**Track game deals and loot**
-
-- Real-time game deals
-- Price tracking
-- Loot notifications
-- Multi-platform support
-- Wishlist integration
-
-</td>
-<td width="50%">
-
-#### [📥 Offline Video Downloader](https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok)
-**Download videos for offline viewing**
-
-- Multiple format support
-- Quality selection
-- Batch downloads
-- Progress tracking
-- Organized library
-
-</td>
-</tr>
+  <tr>
+    <td width="50%">
+      <h4>🎮 LootOps: Tactical HUD</h4>
+      <em>Track game deals and loot</em>
+      <ul>
+        <li>Epic & Steam free drops</li>
+        <li>Real-time loot notifications</li>
+        <li>Wishlist integration</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>📥 Video Downloader</h4>
+      <em>Offline educational use</em>
+      <ul>
+        <li>Fast batch downloads</li>
+        <li>Quality & Format selection</li>
+        <li>Organized local library</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
-### 🔧 Utilities
-
+### 🔧 Utility Services
 <table>
-<tr>
-<td width="50%">
-
-#### [🖼️ Image Converter Pro](https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm)
-**Professional image conversion**
-
-- Multiple format support (PNG, JPG, WebP, etc.)
-- Batch conversion
-- Quality control
-- Resize and optimize
-- Preserve metadata
-
-</td>
-<td width="50%">
-
-#### [🚫 Simple Ad Blocker](https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi)
-**Block ads, browse faster**
-
-- Efficient ad blocking
-- Minimal resource usage
-- Custom filter lists
-- Whitelist support
-- Privacy protection
-
-</td>
-</tr>
+  <tr>
+    <td width="50%">
+      <h4>🖼️ Image Converter Pro</h4>
+      <em>Professional batch toolkit</em>
+      <ul>
+        <li>WebP, AVIF, HEIC support</li>
+        <li>Local optimization & resizing</li>
+        <li>Preserve vital metadata</li>
+      </ul>
+    </td>
+    <td width="50%">
+      <h4>🚫 Simple Ad Blocker</h4>
+      <em>Browse faster and cleaner</em>
+      <ul>
+        <li>Efficient intrusive ad removal</li>
+        <li>Custom filter list support</li>
+        <li>Minimal memory usage</li>
+      </ul>
+    </td>
+  </tr>
 </table>
 
 ---
 
-## 📁 Repository Structure
+## 🚀 Get Started
 
-Each extension follows a consistent, well-organized structure:
+### 🌐 Official Stores (Recommended)
 
-```
-📦 extension-name/
-├── 📄 manifest.json                    # Extension configuration
-├── 📜 LICENSE                          # MIT License
-├── 📖 README.md                        # User guide & documentation
-├── 🔒 SECURITY.md                      # Security policy
-├── 🏪 CHROME_STORE_LISTING.md         # Store submission guide
-├── 📋 CHROME_STORE_PRIVACY_FORM.md    # Privacy compliance
-├── ✅ PRIVACY_COMPLIANCE.md           # Compliance details
-├── 📁 icons/                           # Extension icons
-├── 📁 js/                              # JavaScript files
-├── 📁 css/                             # Stylesheets
-└── 📁 assets/                          # Images and resources
-```
+| Platform | Developer Profile | Link |
+| :--- | :--- | :--- |
+| **Google Chrome** | **Subhan Extensions** | [**Browse Chrome Web Store**](https://chromewebstore.google.com/search/Subhan%20Extensions) |
+| **Microsoft Edge** | **Subhan_Store** | [**Browse Edge Add-ons**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store) |
 
----
-
-## 🚀 Installation
-
-### Option 1: Official Stores (Recommended)
-
-#### 🌐 Chrome Web Store
-Find all our extensions on the **[Chrome Web Store](https://chromewebstore.google.com/search/Subhan%20Extensions)** under the developer name **Subhan Extensions**.
-
-| Extension | Store Link |
-|-----------|------------|
-| 📋 **ClipTrack** | [Install from Chrome Store](https://chromewebstore.google.com/detail/cliptrack-clipboard-histo/edbnajgbhladcmlgnkndgclbfblcnkhg) |
-| 📝 **Smart Paste** | [Install from Chrome Store](https://chromewebstore.google.com/detail/smart-paste/gmjbokljijbegndgfhbmobaniejnaali) |
-| 👻 **GhostType AI** | [Install from Chrome Store](https://chromewebstore.google.com/detail/ghosttype-ai/kmbcehmgnnkkckfgfhmibkmhkgbpjmnk) |
-| 🎮 **LootOps** | [Install from Chrome Store](https://chromewebstore.google.com/detail/lootops-epic-steam-games/ghghcceghdbplljhoagblgbfepepfbcl) |
-| 🔍 **CodeLens** | [Install from Chrome Store](https://chromewebstore.google.com/detail/codelens-extension-source/lhpkbkfmhjgfbdphndmbpfmgfjdnmklf) |
-| ⌨️ **Typing.com Collector** | [Install from Chrome Store](https://chromewebstore.google.com/detail/typingcom-full-paragraph/gfgjhmopbkgdpmddfhmphgddcbnkljce) |
-
-#### 🌐 Microsoft Edge Add-ons
-Our extensions are also available on the **[Edge Add-ons Store](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)** under the developer name **Subhan\_Store**.
-
-| Extension | Store Link |
-|-----------|------------|
-| ⌨️ **Typing.com Collector** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf) |
-| 🚫 **Simple Ad Blocker** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi) |
-| 📥 **Video Downloader** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok) |
-| ⌨️ **Auto Typer Pro** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/auto-typer-pro/cnofkjaifkgoakpcppnoboobgpfdblmf) |
-| 🖼️ **Image Converter Pro** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm) |
-| 🔍 **CodeLens Explorer** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/codelens-extension-sourc/dmgopgfalpffbbkfnjmmaophkkedaclg) |
-| ⏰ **Chronos Context Manager** | [Install from Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/chronos-visual-context-m/jmddfpbhnohjmdmbpmlkhccmpdkejoff) |
-
-### Option 2: Manual Installation (Developer Mode)
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/Subhan-Haider/Extra-Extensions.git
-   cd Extra-Extensions
-   ```
-
-2. **Open Extension Manager**
-   - **Chrome**: Navigate to `chrome://extensions/`
-   - **Edge**: Navigate to `edge://extensions/`
-
-3. **Enable Developer Mode**
-   - Toggle the "Developer mode" switch in the top right corner
-
-4. **Load Extension**
-   - Click "Load unpacked"
-   - Select the specific extension directory you want to install
-   - The extension will appear in your browser toolbar
-
-5. **Configure Settings**
-   - Click the extension icon
-   - Follow the setup wizard (if applicable)
-   - Customize settings to your preference
+### 🏗️ Manual Installation (Developer Build)
+1.  **Clone the Hive**
+    ```bash
+    git clone https://github.com/Subhan-Haider/Extra-Extensions.git
+    cd Extra-Extensions
+    ```
+2.  **Activate Developer Mode** in your browser's extension manager (`chrome://extensions` or `edge://extensions`).
+3.  **Load Unpacked**: Select any individual extension folder to install.
 
 ---
 
-## 📚 Documentation
+## 📚 Documentation Framework
 
-Each extension includes comprehensive documentation:
-
-| Document | Description |
-|----------|-------------|
-| 📖 **README.md** | Installation guide, features, and usage instructions |
-| 🔒 **SECURITY.md** | Security policy and vulnerability reporting |
-| 🏪 **CHROME_STORE_LISTING.md** | Complete Chrome Web Store listing information |
-| 📋 **CHROME_STORE_PRIVACY_FORM.md** | Privacy compliance and data usage details |
-| ✅ **PRIVACY_COMPLIANCE.md** | Permission justifications and compliance info |
+Every extension in this repository follows a strict documentation standard:
+*   📖 **README.md**: User guides, feature lists, and usage steps.
+*   🔒 **SECURITY.md**: Vulnerability reporting and security protocols.
+*   ✅ **PRIVACY_POLICY.md**: Detailed disclosure of data handling practices.
+*   🏪 **STORE_LISTING.md**: Prepared metadata for Web Store submissions.
 
 ---
 
-## 🔐 Privacy & Security
+## 🤝 Join the Mission
 
-We take your privacy seriously. All extensions in this collection:
-
-✅ **No Data Collection** - We don't collect, store, or transmit your personal data  
-✅ **Local Processing** - All operations happen on your device  
-✅ **Minimal Permissions** - Only request permissions essential for functionality  
-✅ **Open Source** - Full transparency, code available for review  
-✅ **Regular Updates** - Security patches and improvements  
-✅ **No Tracking** - No analytics, no third-party trackers
+We welcome contributions from the community!
+*   🐛 **Report Bugs**: Found a glitch in the matrix? Open an issue.
+*   💡 **Suggest Features**: Have an idea for a new tool? Let's hear it.
+*   🔧 **Submit PRs**: Code optimizations and feature additions are always welcome.
+*   ⭐ **Star the Repo**: Show your support for open-source privacy!
 
 ---
 
-## 🤝 Contributing
+## 📞 Support & Community
 
-We welcome contributions! Here's how you can help:
-
-### Ways to Contribute
-
-- 🐛 **Report Bugs** - Found an issue? Let us know!
-- 💡 **Suggest Features** - Have an idea? We'd love to hear it!
-- 📝 **Improve Documentation** - Help make our docs better
-- 🔧 **Submit Pull Requests** - Code contributions are welcome
-- ⭐ **Star the Repository** - Show your support!
-
-### Contribution Process
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+*   **GitHub Issues**: [Open a Ticket](https://github.com/Subhan-Haider/Extra-Extensions/issues)
+*   **Developer**: [Subhan Haider](https://github.com/Subhan-Haider)
+*   **Email Support**: [Contact Link](mailto:subhan_haider_contact_placeholder)
 
 ---
 
-## 📞 Support
+## 📜 License & Acknowledgments
 
-Need help? We're here for you!
+This collection is licensed under the **MIT License**.
+*   ✅ Use commercially • ✅ Modify • ✅ Distribute • ✅ Use privately
 
-- 🐛 **Bug Reports**: [Open an issue](https://github.com/Subhan-Haider/Extra-Extensions/issues)
-- 💬 **Questions**: Check individual extension READMEs
-- 📧 **Email**: Contact the Subhan Haider
-- 📖 **Documentation**: Comprehensive guides in each extension folder
-
----
-
-## 📜 License
-
-All extensions in this repository are licensed under the **MIT License**.
-
-This means you can:
-- ✅ Use commercially
-- ✅ Modify
-- ✅ Distribute
-- ✅ Use privately
-
-See the [LICENSE](LICENSE) file in each extension directory for full details.
-
----
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors who help improve these extensions
-- Built with modern web technologies and best practices
-- Inspired by the need for privacy-focused, efficient browser tools
-
----
-
-## ⚠️ Disclaimer
-
-These extensions are independently developed and maintained. They are not affiliated with, endorsed by, or sponsored by:
-- Google Chrome
-- Microsoft Edge
-- Any third-party services mentioned in individual extensions
-
-Use at your own discretion. While we strive for quality and security, we provide these extensions "as is" without warranty.
-
----
+**Disclaimer**: These extensions are independently developed and are not affiliated with Google or Microsoft. Use at your own discretion.
 
 <div align="center">
 
-### 🌟 If you find these extensions useful, please consider starring the repository!
+### 🌟 Building the future of browsing? Star this repository! 🌟
 
-**Made with ❤️ by Subhan Haider**
+**Created with ❤️ by Subhan Haider**
 
 [⬆ Back to Top](#-browser-extensions-collection)
 
