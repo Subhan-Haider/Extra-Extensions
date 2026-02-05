@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 return { orderId, date: new Date().toLocaleDateString() };
             }
         }, (results) => {
+            if (chrome.runtime.lastError || !results || !results[0]) return;
             const data = results[0].result;
             document.getElementById('order-info').textContent = `Order Found: ${data.orderId}`;
         });

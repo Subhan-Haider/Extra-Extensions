@@ -44,6 +44,11 @@
                 target: { tabId: tabs[0].id },
                 func: () => document.body.innerText.split(/\s+/).length
             }, (results) => {
+                if (chrome.runtime.lastError || !results || !results[0]) {
+                    document.getElementById('time').textContent = '--';
+                    document.getElementById('words').textContent = 'Unable to scan page';
+                    return;
+                }
                 const count = results[0].result;
                 const min = Math.ceil(count / 200);
                 document.getElementById('time').textContent = min + 'm';

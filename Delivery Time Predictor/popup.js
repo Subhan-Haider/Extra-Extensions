@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             return match ? parseInt(match[1]) : 2; // Default to 2 days
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) {
+            console.log("Unable to scan this page.");
+            return;
+        }
         const theirEst = results[0].result || 2;
         const realEst = theirEst + Math.floor(Math.random() * 3) + 1; // Add 1-3 days jitter
 

@@ -9,6 +9,7 @@ document.getElementById('view-refurb').onclick = async () => {
             return title.split(' ').slice(0, 4).join(' '); // Search first 4 words
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const query = encodeURIComponent(results[0].result + ' refurbished');
         window.open(`https://www.backmarket.com/en-us/search?q=${query}`, '_blank');
     });

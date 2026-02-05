@@ -169,6 +169,7 @@ document.getElementById("save-preset").addEventListener("click", async () => {
 });
 
 document.getElementById("preset-select").addEventListener("change", async (e) => {
+        if (chrome.runtime.lastError || !e || !e[0]) return;
   const name = e.target.value;
   if (!name) return;
 

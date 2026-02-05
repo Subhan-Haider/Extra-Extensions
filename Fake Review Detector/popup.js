@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             };
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const data = results[0].result;
         const badge = document.querySelector('.status-badge');
         const resultBox = document.querySelector('.result-box');

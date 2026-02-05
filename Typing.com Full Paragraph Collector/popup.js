@@ -5,7 +5,11 @@ document.getElementById('collectBtn').addEventListener('click', async () => {
         target: { tabId: tab.id },
         func: collectParagraph
     }, (results) => {
-        if(results && results[0] && results[0].result){
+        if (chrome.runtime.lastError || !results || !results[0]) {
+            console.log("Unable to collect from this page.");
+            return;
+        }
+        if (results && results[0] && results[0].result) {
             document.getElementById('paragraph').value = results[0].result;
         }
     });
@@ -15,7 +19,7 @@ document.getElementById('collectBtn').addEventListener('click', async () => {
 function collectParagraph() {
     let words = [];
     document.querySelectorAll('.word, .letter').forEach(el => {
-        if(el.innerText.trim() !== "") words.push(el.innerText.trim());
+        if (el.innerText.trim() !== "") words.push(el.innerText.trim());
     });
     // Combine words into a single paragraph
     return words.join(' ');

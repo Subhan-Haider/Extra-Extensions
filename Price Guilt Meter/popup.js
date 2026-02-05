@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return price;
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const currentPrice = results[0].result || 0;
         const marketAvg = currentPrice ? currentPrice * 0.85 : 0; // Simulated market average
 

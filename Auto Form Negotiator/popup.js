@@ -16,6 +16,7 @@ document.getElementById('draft-btn').onclick = async () => {
             return prices.join(', ');
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const context = results[0].result || "Standard Pricing";
         const text = `Subject: Inquiry regarding specialized pricing for ${domain}\n\nHi Team,\n\nI'm very interested in your platform, particularly the offerings around ${context}. However, my current budget is quite optimized. Do you offer seasonal discounts, startup pricing, or non-profit rates? \n\nLooking forward to joining your ecosystem.`;
         draft.textContent = text;

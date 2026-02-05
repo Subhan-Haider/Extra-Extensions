@@ -57,11 +57,13 @@
     <script>
         document.getElementById('add').onclick = async () => {
             const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            if (!tab || !tab.url || tab.url.startsWith('chrome://')) return;
             chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['bookmark.js'] });
             window.close();
         };
 
         chrome.storage.local.get(['bookmarks'], (res) => {
+            if (chrome.runtime.lastError || !res) return;
             const list = document.getElementById('list');
             (res.bookmarks || []).forEach(b => {
                 const item = document.createElement('div');

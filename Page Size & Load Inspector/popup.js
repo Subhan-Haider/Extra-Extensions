@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             };
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const data = results[0].result;
         document.getElementById('size').textContent = data.sizeMB + ' MB';
         document.getElementById('requests').textContent = data.requests;

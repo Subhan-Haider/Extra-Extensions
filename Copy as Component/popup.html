@@ -61,7 +61,8 @@
     <script>
         document.getElementById('pick').onclick = async () => {
             const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-            chrome.scripting.executeScript({ target: { tabId: tab.id }, func: () => alert('Component code copied to clipboard!') });
+            if (!tab || !tab.url || tab.url.startsWith('chrome://')) return;
+            chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['pick.js'] });
             window.close();
         };
     </script>

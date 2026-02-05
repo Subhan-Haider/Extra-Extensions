@@ -30,7 +30,7 @@ chrome.runtime.onMessage.addListener((msg) => {
         chrome.storage.local.set({ active: false });
         chrome.notifications.create({
             type: 'basic',
-            iconUrl: 'icon.png',
+            iconUrl: 'icon.svg',
             title: 'Condition Met!',
             message: `The text "${msg.text}" was found on the page.`
         });

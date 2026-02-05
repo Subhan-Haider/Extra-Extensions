@@ -234,6 +234,7 @@ function showNotification(projectName, type) {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.type === 'TAKE_SNAPSHOT') {
     chrome.tabs.query({ currentWindow: true }, (tabs) => {
+        if (chrome.runtime.lastError || !tabs || !tabs[0]) return;
       sendResponse({ snapshot: tabs.map(t => ({ url: t.url, title: t.title, favIconUrl: t.favIconUrl })) });
     });
     return true;

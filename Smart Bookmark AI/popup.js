@@ -8,6 +8,10 @@ document.getElementById('save-bookmark').onclick = async () => {
         target: { tabId: tab.id },
         func: () => document.body.innerText.substring(0, 3000)
     }, async (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) {
+            btn.textContent = 'Bookmark current tab';
+            return;
+        }
         const text = results[0].result;
 
         chrome.storage.local.get(['global_ai_key'], async (res) => {

@@ -14,6 +14,10 @@ document.querySelector('.btn').onclick = async () => {
             return meta + " " + headings;
         }
     }, async (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) {
+            btn.textContent = 'Generate Soft Summary';
+            return;
+        }
         const text = results[0].result;
 
         chrome.storage.local.get(['global_ai_key'], async (res) => {

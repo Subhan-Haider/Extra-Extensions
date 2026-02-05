@@ -13,6 +13,7 @@ document.getElementById('analyze').onclick = async () => {
         target: { tabId: tab.id },
         func: () => document.body.innerText.substring(0, 5000)
     }, async (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const text = results[0].result;
 
         moodText.textContent = 'AI is analyzing...';

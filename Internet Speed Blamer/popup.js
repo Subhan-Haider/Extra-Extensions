@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return { ttfb, domLoad };
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const data = results[0].result;
         const culprit = document.querySelector('.culprit');
         const detail = document.querySelector('.detail');

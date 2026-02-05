@@ -100,10 +100,15 @@
 
         document.getElementById('tab-ls').onclick = async () => {
             const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            if (!tab || !tab.url || tab.url.startsWith('chrome://')) {
+                render({ "Status": "System page restricted" });
+                return;
+            }
             chrome.scripting.executeScript({
                 target: { tabId: tab.id },
                 func: () => ({ ...localStorage })
             }, (results) => {
+                if (chrome.runtime.lastError || !results || !results[0]) return;
                 render(results[0].result);
             });
         };

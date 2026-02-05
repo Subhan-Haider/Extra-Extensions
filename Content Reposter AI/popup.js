@@ -11,6 +11,10 @@ document.querySelector('.btn').onclick = async () => {
         target: { tabId: tab.id },
         func: () => document.body.innerText.substring(0, 5000)
     }, async (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) {
+            btn.textContent = 'Generate Repost Material';
+            return;
+        }
         const text = results[0].result;
 
         chrome.storage.local.get(['global_ai_key'], async (res) => {

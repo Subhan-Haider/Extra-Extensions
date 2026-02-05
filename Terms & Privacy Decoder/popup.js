@@ -14,6 +14,7 @@ document.getElementById('scan-btn').onclick = async () => {
         target: { tabId: tab.id },
         func: () => document.body.innerText.substring(0, 10000)
     }, async (scriptResults) => {
+        if (chrome.runtime.lastError || !scriptResults || !scriptResults[0]) return;
         const text = scriptResults[0].result;
 
         chrome.storage.local.get(['global_ai_key'], async (res) => {

@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             return keywords.filter(k => text.includes(k));
         }
     }, (results) => {
+        if (chrome.runtime.lastError || !results || !results[0]) return;
         const found = results[0].result;
         const score = Math.round((found.length / 7) * 100);
 

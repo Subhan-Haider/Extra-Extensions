@@ -84,15 +84,17 @@
     <button id="save" class="btn">Apply Locally</button>
 
     <script>
-        const host = new URL(window.location.href).hostname;
         document.getElementById('save').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            if (!tab || !tab.url || tab.url.startsWith('chrome://')) return;
+
+            const host = new URL(tab.url).hostname;
             const settings = {
                 dark: document.getElementById('dark-toggle').checked,
                 brightness: document.getElementById('brightness').value,
                 contrast: document.getElementById('contrast').value
             };
             await chrome.storage.local.set({ [host]: settings });
-            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
             chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['apply.js'] });
         };
     </script>
