@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Terms & Privacy Decoder",
+  "version": "1.0.0",
+  "description": "Decode long Terms of Service into simple, actionable summaries with Red Flag alerts.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

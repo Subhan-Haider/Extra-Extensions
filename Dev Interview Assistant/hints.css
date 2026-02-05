@@ -1,0 +1,21 @@
+#discrete-hint-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 180px;
+    background: rgba(15, 23, 42, 0.95);
+    color: #94a3b8;
+    padding: 10px;
+    border-radius: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    border: 1px solid #1e293b;
+    z-index: 1000000;
+    pointer-events: none;
+    opacity: 0.1;
+    transition: opacity 0.3s;
+}
+
+#discrete-hint-box:hover {
+    opacity: 1;
+}

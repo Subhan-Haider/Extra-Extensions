@@ -1,0 +1,131 @@
+:root {
+    --ink: #1e293b;
+    --paper: #f8fafc;
+    --gold: #d4af37;
+    --sepia-paper: #f4ecd8;
+    --sepia-ink: #433422;
+}
+
+body {
+    width: 300px;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 4px;
+}
+
+header p {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.main-btn {
+    width: 100%;
+    background: var(--ink);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 24px;
+    transition: transform 0.2s;
+}
+
+.main-btn:hover {
+    transform: translateY(-2px);
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.theme-switch {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.theme-btn {
+    background: white;
+    border: 1px solid #e2e8f0;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.theme-btn.active {
+    border-color: var(--gold);
+    background: #fffbeb;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: var(--gold);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    color: #94a3b8;
+}
+
+/* Reader Mode Styles (Injected into page) */
+#reader-mode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--paper);
+    z-index: 999999;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.reader-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.reader-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.reader-content h1,
+.reader-content h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+}
+
+.reader-content p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}

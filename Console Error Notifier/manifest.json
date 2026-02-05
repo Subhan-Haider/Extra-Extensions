@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Console Error Notifier",
+  "version": "1.0.0",
+  "description": "Get instant desktop alerts when a website throws JavaScript errors.",
+  "permissions": [
+    "notifications",
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

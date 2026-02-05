@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "One-Click Unsubscribe AI",
+  "version": "1.0.0",
+  "description": "Never dig for an unsubscribe link again. Instantly find and click newsletter purge links.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mail.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

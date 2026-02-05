@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Regex Tester Popup",
+  "version": "1.0.0",
+  "description": "Quickly test regular expressions against any string in a clean popup.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

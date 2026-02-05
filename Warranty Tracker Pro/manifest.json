@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Warranty Tracker Pro",
+  "version": "1.0.0",
+  "description": "Automatically detect purchase confirmations and track your product warranties.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

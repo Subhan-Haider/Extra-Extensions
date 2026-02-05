@@ -1,0 +1,18 @@
+.tone-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-family: sans-serif;
+    cursor: pointer;
+    z-index: 10000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.tone-btn:hover {
+    background: #059669;
+    transform: scale(1.05);
+}

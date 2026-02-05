@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Form Filler (Rules)",
+  "version": "1.0.0",
+  "description": "Privacy-first, rules-based form filler. No cloud, no AI, strictly local.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Refresh With Conditions",
+  "version": "1.0.0",
+  "description": "Smart auto-refresh. Alert or stop when specific content changes or appears.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "alarms",
+    "notifications"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

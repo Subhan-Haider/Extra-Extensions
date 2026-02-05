@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Form Negotiator",
+  "version": "1.0.0",
+  "description": "Automatically detect pricing pages and draft professional discount negotiation emails.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

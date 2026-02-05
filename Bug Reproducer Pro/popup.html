@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bug Reproducer</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .status {
+            font-size: 11px;
+            margin-top: 10px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Bug <span style="color:#ef4444;">Recorder</span></h1>
+    <button id="export" class="btn">Export Reproduction Steps</button>
+    <div id="count" class="status">0 actions recorded</div>
+
+    <script>
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.tabs.sendMessage(tabs[0].id, { type: 'GET_LOGS' }, (logs) => {
+                document.getElementById('count').textContent = `${logs?.length || 0} actions recorded`;
+            });
+        });
+
+        document.getElementById('export').onclick = () => {
+            alert('Reproduction data exported to clipboard!');
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Warranty Tracker</title>
+    <style>
+        body {
+            width: 280px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Warranty <span style="color:#3b82f6;">Tracker</span></h1>
+    <div class="card" id="order-info">No active order detected on this page.</div>
+    <button id="track-btn" class="btn">Add to Tracker</button>
+    <script src="popup.js"></script>
+</body>
+
+</html>

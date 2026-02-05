@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Page \u00e2\u2020\u2019 Checklist",
+  "version": "1.0.0",
+  "description": "Convert tutorials and documentation into interactive step-by-step checklists.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "checklist.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Price History</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #16a34a;
+            margin-bottom: 20px;
+        }
+
+        .history-list {
+            font-size: 11px;
+        }
+
+        .item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .price-point {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4px;
+        }
+
+        .host {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .date {
+            color: #94a3b8;
+        }
+
+        .price {
+            color: #16a34a;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Price <span style="color:#1e293b;">Tracker</span></h1>
+    <div id="list" class="history-list">Scanning price history...</div>
+
+    <script>
+        chrome.storage.local.get(['priceHistory'], (res) => {
+            const list = document.getElementById('list');
+            list.innerHTML = '';
+            const items = Object.entries(res.priceHistory || {});
+
+            if (items.length === 0) {
+                list.textContent = 'No price history captured yet. Visit product pages.';
+                return;
+            }
+
+            items.forEach(([url, history]) => {
+                const last = history[history.length - 1];
+                const div = document.createElement('div');
+                div.className = 'item';
+                div.innerHTML = `
+          <div class="host">${last.host}</div>
+          <div class="price-point">
+            <span class="date">${last.date}</span>
+            <span class="price">${last.price}</span>
+          </div>
+        `;
+                list.appendChild(div);
+            });
+        });
+    </script>
+</body>
+
+</html>

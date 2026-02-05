@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Price Guilt</title>
+    <style>
+        body {
+            width: 240px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            text-align: center;
+        }
+
+        .meter-bg {
+            background: #f1f5f9;
+            height: 12px;
+            border-radius: 6px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .meter-fill {
+            background: linear-gradient(to right, #22c55e, #eab308, #ef4444);
+            width: 0%;
+            height: 100%;
+            border-radius: 6px;
+            transition: width 0.5s;
+        }
+
+        #status {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #1e293b;
+            transition: color 0.3s;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        p {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Guilt <span style="color:#ef4444;">Meter</span></h1>
+
+    <div class="meter-bg">
+        <div id="meter-fill" class="meter-fill"></div>
+    </div>
+
+    <div id="status">Analyzing...</div>
+    <p id="price-info">Loading page data...</p>
+
+    <p style="margin-top:15px; font-size:9px; opacity:0.7;">Compare before you commit.</p>
+    <script src="popup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+#ai-sidekick-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    height: 450px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.sidekick-header {
+    padding: 15px;
+    background: #6366f1;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidekick-chat {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.msg {
+    padding: 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    max-width: 85%;
+}
+
+.msg.bot {
+    background: #f1f5f9;
+    align-self: flex-start;
+}
+
+.msg.user {
+    background: #6366f1;
+    color: white;
+    align-self: flex-end;
+}
+
+.sidekick-input-area {
+    padding: 15px;
+    border-top: 1px solid #e2e8f0;
+}
+
+#sidekick-query {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Security Scan</title>
+    <style>
+        body {
+            width: 280px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #3b82f6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 12px;
+        }
+
+        .tag {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .pass {
+            background: #10b981;
+        }
+
+        .fail {
+            background: #ef4444;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Security <span style="color:#fff;">Audit</span></h1>
+
+    <div class="status-row">
+        <span>Content-Security-Policy</span>
+        <span class="tag pass">PASS</span>
+    </div>
+    <div class="status-row">
+        <span>Strict-Transport-Security</span>
+        <span class="tag pass">PASS</span>
+    </div>
+    <div class="status-row">
+        <span>X-Frame-Options</span>
+        <span class="tag fail">MISSING</span>
+    </div>
+
+    <p style="font-size:10px; color:#94a3b8; text-align:center; margin-top:20px;">Reduces risk of XSS and clickjacking.
+    </p>
+</body>
+
+</html>

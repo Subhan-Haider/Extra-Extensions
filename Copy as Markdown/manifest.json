@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Copy as Markdown",
+  "version": "1.0.0",
+  "description": "Convert selected text to clean Markdown. Perfect for researchers and developers.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

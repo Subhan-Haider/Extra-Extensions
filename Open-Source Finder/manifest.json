@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Open-Source Finder",
+  "version": "1.0.0",
+  "description": "Stop paying for software. Automatically find leading open-source alternatives as you browse paid tools.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

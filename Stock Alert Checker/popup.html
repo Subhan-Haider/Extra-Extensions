@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Alert</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .status-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 12px;
+        }
+
+        .url {
+            font-size: 11px;
+            color: #64748b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 5px;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 800;
+            color: #10b981;
+        }
+
+        .btn {
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Stock <span style="color:#10b981;">Monitor</span></h1>
+
+    <div id="monitor-list">
+        <div class="status-card">
+            <div class="url">amazon.com/product/xyz...</div>
+            <div class="badge">RUNNING (Check every 5m)</div>
+        </div>
+    </div>
+
+    <button id="add-btn" class="btn">Monitor This Page</button>
+    <script src="popup.js"></script>
+</body>
+
+</html>

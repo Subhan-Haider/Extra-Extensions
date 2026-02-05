@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Scroll</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 20px;
+            background: #fffbeb;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #92400e;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .control-grp {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            color: #b45309;
+            margin-bottom: 8px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #d97706;
+        }
+
+        .btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .start {
+            background: #d97706;
+            color: white;
+        }
+
+        .stop {
+            background: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Auto <span style="color:#d97706;">Scroll</span></h1>
+
+    <div class="control-grp">
+        <label>Scrolling Speed</label>
+        <input type="range" id="speed" min="1" max="10" value="3">
+    </div>
+
+    <div class="btns">
+        <button id="start" class="btn start">Start</button>
+        <button id="stop" class="btn stop">Stop</button>
+    </div>
+
+    <script>
+        const send = (type, speed) => {
+            chrome.tabs.query({ active: true, currentWindow: true }, async (tabs) => {
+                // Ensure script is injected
+                await chrome.scripting.executeScript({ target: { tabId: tabs[0].id }, files: ['scroll.js'] });
+                chrome.tabs.sendMessage(tabs[0].id, { type, speed });
+            });
+        };
+
+        document.getElementById('start').onclick = () => send('START_SCROLL', document.getElementById('speed').value);
+        document.getElementById('stop').onclick = () => send('STOP_SCROLL');
+    </script>
+</body>
+
+</html>

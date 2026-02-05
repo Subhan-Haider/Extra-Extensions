@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Bookmark AI",
+  "version": "1.0.0",
+  "description": "Intelligently categorize and summarize your bookmarks using AI.",
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

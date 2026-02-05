@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selector Bookmarks</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .bookmark-list {
+            max-height: 200px;
+            overflow-y: auto;
+            font-size: 11px;
+        }
+
+        .b-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOM <span style="color:#6366f1;">Bookmarks</span></h1>
+    <button id="add" class="btn">+ Bookmark Element</button>
+    <div id="list" class="bookmark-list"></div>
+
+    <script>
+        document.getElementById('add').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['bookmark.js'] });
+            window.close();
+        };
+
+        chrome.storage.local.get(['bookmarks'], (res) => {
+            const list = document.getElementById('list');
+            (res.bookmarks || []).forEach(b => {
+                const item = document.createElement('div');
+                item.className = 'b-item';
+                item.textContent = b.path;
+                list.appendChild(item);
+            });
+        });
+    </script>
+</body>
+
+</html>

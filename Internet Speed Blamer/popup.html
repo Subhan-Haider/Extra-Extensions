@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blamer</title>
+    <style>
+        body {
+            width: 260px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #facc15;
+            text-align: center;
+            margin: 0;
+        }
+
+        .culprit-box {
+            background: #1e293b;
+            border: 2px solid #334155;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .culprit {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #ef4444;
+            margin-top: 5px;
+        }
+
+        .detail {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>The <span style="color:#fff;">Blamer</span></h1>
+
+    <div class="culprit-box">
+        <div style="font-size:10px; text-transform:uppercase; color:#94a3b8; font-weight: 700;">Main Culprit:</div>
+        <div class="culprit">Analyzing...</div>
+        <div class="detail">Checking navigation timing data...</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

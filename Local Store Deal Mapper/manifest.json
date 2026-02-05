@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Local Store Deal Mapper",
+  "version": "1.0.0",
+  "description": "Find nearby offline store deals while browsing products online. Compare and save.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "geolocation",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

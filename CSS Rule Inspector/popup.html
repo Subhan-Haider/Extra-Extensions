@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Inspector</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 20px;
+            text-align: center;
+            background: #fafafa;
+            font-family: sans-serif;
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #ec4899;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 11px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">🎨</div>
+    <h1>Style <span style="color: #ec4899;">Picker</span></h1>
+    <button id="activate" class="btn">Pick Element</button>
+    <p>Click an element to see its styles.</p>
+    <script>
+        document.getElementById('activate').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['inspect.js'] });
+            window.close();
+        };
+    </script>
+</body>
+
+</html>

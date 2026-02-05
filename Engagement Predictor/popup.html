@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Predict Engagement</title>
+    <style>
+        :root {
+            --accent: #f43f5e;
+            --bg: #0f172a;
+        }
+
+        body {
+            width: 320px;
+            padding: 20px;
+            background: var(--bg);
+            color: #f1f5f9;
+            font-family: 'Inter', sans-serif;
+        }
+
+        textarea {
+            width: 100%;
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            box-sizing: border-box;
+            resize: none;
+        }
+
+        .score-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .score-circle {
+            width: 80px;
+            height: 80px;
+            border: 5px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        .status {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .tips {
+            font-size: 11px;
+            color: #94a3b8;
+            text-align: left;
+            background: #1e293b;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="font-size: 1.1rem; margin-bottom: 20px;">Viral <span style="color:var(--accent);">Score</span></h1>
+
+    <textarea id="draft" rows="4" placeholder="Paste your draft here..."></textarea>
+
+    <div class="score-container">
+        <div class="score-circle" id="score">--</div>
+        <div class="status" id="status">Analyze your post</div>
+    </div>
+
+    <div class="tips" id="tips">
+        Tip: Add a strong hook or a question at the end to boost interaction.
+    </div>
+
+    <script>
+        const draft = document.getElementById('draft');
+        const scoreEl = document.getElementById('score');
+        const statusEl = document.getElementById('status');
+
+        draft.oninput = () => {
+            const text = draft.value;
+            if (!text) return;
+
+            let score = 30;
+            if (text.length > 50 && text.length < 280) score += 20;
+            if (text.includes('?')) score += 15;
+            if (text.includes('!') || text.includes('🔥')) score += 10;
+            if (text.split(' ').length > 10) score += 10;
+
+            score = Math.min(score, 99);
+            scoreEl.textContent = score + '%';
+
+            if (score > 80) statusEl.textContent = 'High Potential! 🚀';
+            else if (score > 50) statusEl.textContent = 'Decent Reach 📈';
+            else statusEl.textContent = 'Room for growth';
+        };
+    </script>
+</body>
+
+</html>

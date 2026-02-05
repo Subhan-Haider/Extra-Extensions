@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reposter</title>
+    <style>
+        body {
+            width: 320px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .tab-bar {
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            font-size: 12px;
+            padding-bottom: 5px;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        .tab.active {
+            color: #6366f1;
+            border-bottom: 2px solid #6366f1;
+            font-weight: 700;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Content <span style="color:#6366f1;">Reposter</span></h1>
+
+    <div class="tab-bar">
+        <div class="tab active">Twitter Thread</div>
+        <div class="tab">LinkedIn</div>
+        <div class="tab">Reddit</div>
+    </div>
+
+    <textarea placeholder="AI will generate your thread here..."></textarea>
+
+    <button class="btn">Generate Repost Material</button>
+</body>
+
+</html>

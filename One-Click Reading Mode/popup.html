@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>One-Click Reading Mode</title>
+    <link rel="stylesheet" href="popup.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="reader-popup">
+        <header>
+            <h1>Library <span class="accent">Mode</span></h1>
+            <p>Pure reading, zero noise.</p>
+        </header>
+
+        <div class="controls">
+            <button id="toggle-reader" class="main-btn">Enter Reading Mode</button>
+
+            <div class="setting-group">
+                <label>Theme</label>
+                <div class="theme-switch">
+                    <button data-theme="light" class="theme-btn active">Light</button>
+                    <button data-theme="sepia" class="theme-btn">Sepia</button>
+                    <button data-theme="dark" class="theme-btn">Dark</button>
+                </div>
+            </div>
+
+            <div class="setting-group">
+                <label>Font Size</label>
+                <input type="range" id="font-size" min="14" max="24" value="18">
+            </div>
+        </div>
+
+        <footer>
+            <span>Press ESC to exit anytime.</span>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

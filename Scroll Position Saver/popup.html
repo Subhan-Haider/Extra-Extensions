@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll Saver</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="scroll-container">
+        <header>
+            <div class="logo-icon">⚓</div>
+            <h1>Scroll <span class="accent">Saver</span></h1>
+        </header>
+
+        <div class="status-card">
+            <p id="current-status">Auto-saving active.</p>
+            <div class="indicator pulse"></div>
+        </div>
+
+        <div class="settings">
+            <div class="set-row">
+                <span>History</span>
+                <span id="history-count" class="badge">0 pages</span>
+            </div>
+            <button id="clear-history" class="clear-btn">Clear All Spots</button>
+        </div>
+
+        <footer>
+            <p>Never lose your place again.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

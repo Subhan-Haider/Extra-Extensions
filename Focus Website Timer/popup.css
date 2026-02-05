@@ -1,0 +1,133 @@
+:root {
+    --zen-bg: #fdfbf7;
+    --zen-sage: #94a684;
+    --zen-text: #4a4a4a;
+    --zen-dim: #8e8e8e;
+    --zen-card: #ffffff;
+    --zen-accent: #c4d7b2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 340px;
+    background-color: var(--zen-bg);
+    color: var(--zen-text);
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
+}
+
+.zen-container {
+    padding: 24px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: var(--zen-sage);
+}
+
+.date {
+    font-size: 0.75rem;
+    color: var(--zen-dim);
+    font-weight: 500;
+}
+
+.focus-card {
+    background: var(--zen-card);
+    padding: 30px 20px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+    border: 1px solid rgba(148, 166, 132, 0.1);
+}
+
+h2 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--zen-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timer-display {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: var(--zen-sage);
+    margin-bottom: 12px;
+    letter-spacing: -2px;
+}
+
+.limit-status {
+    font-size: 0.75rem;
+    color: var(--zen-dim);
+}
+
+.settings-panel h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--zen-text);
+}
+
+.usage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.usage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.zen-btn {
+    width: 100%;
+    background: var(--zen-sage);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.zen-btn:hover {
+    background: #839573;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(148, 166, 132, 0.2);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--zen-accent);
+    border-radius: 10px;
+}

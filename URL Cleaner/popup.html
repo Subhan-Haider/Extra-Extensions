@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>URL Cleaner</title>
+    <style>
+        body {
+            width: 240px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0;
+            color: #1e293b;
+        }
+
+        .counter {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .count-val {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #3b82f6;
+            line-height: 1;
+        }
+
+        .count-label {
+            font-size: 0.7rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin-top: 4px;
+            display: block;
+        }
+
+        p {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">🧹</div>
+    <h1>URL <span style="color: #3b82f6;">Cleaner</span></h1>
+
+    <div class="counter">
+        <span id="clean-count" class="count-val">0</span>
+        <span class="count-label">Parameters Stripped</span>
+    </div>
+
+    <p>Tracking protection is active.</p>
+
+    <script>
+        chrome.storage.local.get(['cleanCount'], (res) => {
+            document.getElementById('clean-count').textContent = res.cleanCount || 0;
+        });
+    </script>
+</body>
+
+</html>

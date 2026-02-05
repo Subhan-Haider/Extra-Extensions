@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Right-Click Enhancer",
+  "version": "1.0.0",
+  "description": "Adds useful options to your right-click menu: Copy Title, Clean Image URL, and more.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

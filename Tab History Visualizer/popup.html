@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Journey</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 25px;
+            background: #fafaf9;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #78350f;
+            margin-bottom: 25px;
+        }
+
+        .timeline {
+            border-left: 2px solid #fbbf24;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .journey-node {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .journey-node::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #fbbf24;
+        }
+
+        .time {
+            font-size: 10px;
+            color: #92400e;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1c1917;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digital <span style="color:#d97706;">Journey</span></h1>
+
+    <div class="timeline">
+        <div class="journey-node">
+            <div class="time">12:30 PM - Current</div>
+            <div class="title">Productive Session on GitHub</div>
+        </div>
+        <div class="journey-node">
+            <div class="time">11:15 AM</div>
+            <div class="title">Research phase on StackOverflow</div>
+        </div>
+        <div class="journey-node">
+            <div class="time">10:00 AM</div>
+            <div class="title">Daily Sync on Slack</div>
+        </div>
+    </div>
+</body>
+
+</html>

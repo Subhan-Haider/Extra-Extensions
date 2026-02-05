@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Page Explain AI",
+  "version": "1.0.0",
+  "description": "Right-click any text or page to get a simple explanation powered by AI.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting",
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

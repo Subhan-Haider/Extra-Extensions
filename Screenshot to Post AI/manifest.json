@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Screenshot to Post AI",
+  "version": "1.0.0",
+  "description": "Convert screenshots into polished text posts instantly. OCR + AI powered content creation.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

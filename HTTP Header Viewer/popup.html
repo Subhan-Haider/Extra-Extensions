@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Header Viewer</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fdfdfd;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        .header-list {
+            font-size: 11px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .h-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .h-name {
+            font-weight: 700;
+            color: #475569;
+            max-width: 140px;
+            overflow-wrap: break-word;
+        }
+
+        .h-val {
+            color: #64748b;
+            max-width: 180px;
+            text-align: right;
+            overflow-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTTP <span style="color:#2563eb;">Headers</span></h1>
+    <div id="list" class="header-list">Loading headers...</div>
+
+    <script>
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.runtime.sendMessage({ type: 'GET_HEADERS', tabId: tabs[0].id }, (headers) => {
+                const list = document.getElementById('list');
+                list.innerHTML = '';
+                if (!headers || headers.length === 0) {
+                    list.textContent = 'No headers captured yet. Refresh the page.';
+                    return;
+                }
+                headers.forEach(h => {
+                    const row = document.createElement('div');
+                    row.className = 'h-row';
+                    row.innerHTML = `<span class="h-name">${h.name}</span><span class="h-val">${h.value}</span>`;
+                    list.appendChild(row);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

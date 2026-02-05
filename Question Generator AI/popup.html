@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Questions</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fafafa;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #4338ca;
+        }
+
+        .q-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .q-item:hover {
+            border-color: #4338ca;
+            transform: translateX(5px);
+        }
+
+        .btn {
+            background: #4338ca;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Smart <span style="color:#6366f1;">Questions</span></h1>
+
+    <div id="questions-list">
+        <div class="q-item">How does this impact the long-term scalability of the core architecture?</div>
+        <div class="q-item">Are there any specific edge cases where this approach might fail?</div>
+        <div class="q-item">How do we measure the success of this implementation in Q1?</div>
+    </div>
+
+    <button class="btn">Generate New Questions</button>
+</body>
+
+</html>

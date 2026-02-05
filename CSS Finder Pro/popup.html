@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Finder</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 20px;
+            background: #fdf2f8;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #db2777;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #db2777;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 11px;
+            color: #831843;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS <span style="color:#000;">Finder</span></h1>
+    <button id="pick" class="btn">Inspect Element</button>
+    <p>Click element to get Tailwind classes.</p>
+    <script>
+        document.getElementById('pick').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['extract.js'] });
+            window.close();
+        };
+    </script>
+</body>
+
+</html>

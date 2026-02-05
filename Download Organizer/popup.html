@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Download Organizer</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="organizer-app">
+        <header>
+            <h1>Sort <span class="accent">Master</span></h1>
+            <label class="switch">
+                <input type="checkbox" id="toggle-enabled" checked>
+                <span class="slider"></span>
+            </label>
+        </header>
+
+        <div class="rule-list">
+            <h3>Active Rules</h3>
+            <div class="rule-item"><span>.pdf</span> → <span>Documents/PDFs</span></div>
+            <div class="rule-item"><span>.jpg</span> → <span>Images</span></div>
+            <div class="rule-item"><span>.zip</span> → <span>Archives</span></div>
+        </div>
+
+        <button class="primary-btn">Configure Rules</button>
+
+        <footer>
+            <p>Organizing your digital life.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

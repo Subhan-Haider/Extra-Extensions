@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Discount Detector</title>
+    <style>
+        body {
+            width: 260px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fffcf0;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #b45309;
+            text-align: center;
+        }
+
+        .detector-box {
+            background: white;
+            border: 2px solid #fbbf24;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .status {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .real {
+            color: #059669;
+        }
+
+        .fake {
+            color: #dc2626;
+        }
+
+        .meta {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Sale <span style="color:#d97706;">Validator</span></h1>
+
+    <div id="result-box" class="detector-box">
+        <div id="status" class="status">--</div>
+        <div id="details" class="meta">Analyzing price context...</div>
+    </div>
+
+    <script>
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            const url = tabs[0].url;
+            chrome.storage.local.get(['priceHistory'], (res) => {
+                const history = (res.priceHistory || {})[url] || [];
+                const statusEl = document.getElementById('status');
+                const detailEl = document.getElementById('details');
+
+                if (history.length < 2) {
+                    statusEl.textContent = 'NEUTRAL';
+                    detailEl.textContent = 'Not enough history data for this item.';
+                } else {
+                    const current = history[history.length - 1].price;
+                    const prev = history[history.length - 2].price;
+
+                    if (current === prev) {
+                        statusEl.textContent = 'FAKE SALE';
+                        statusEl.className = 'status fake';
+                        detailEl.textContent = 'The price has not changed recently despite the "sale" tag.';
+                    } else {
+                        statusEl.textContent = 'REAL CHANGE';
+                        statusEl.className = 'status real';
+                        detailEl.textContent = `Price moved from ${prev} to ${current}.`;
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

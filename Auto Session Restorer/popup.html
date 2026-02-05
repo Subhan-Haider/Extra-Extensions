@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Auto Session Restorer</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="brand">
+                <div class="logo-circ"></div>
+                <h1>Session <span class="glow">Restorer</span></h1>
+            </div>
+            <button id="save-current" class="primary-btn">+ Save Current</button>
+        </header>
+
+        <div class="search-bar">
+            <input type="text" id="session-name" placeholder="Name your session...">
+        </div>
+
+        <main id="session-list">
+            <!-- Session items will be injected here -->
+            <div class="empty-state">
+                <p>No active sessions found.</p>
+                <span>Save your first workspace above.</span>
+            </div>
+        </main>
+
+        <div class="quick-stats">
+            <div id="active-count" class="stat">0 Sessions Active</div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

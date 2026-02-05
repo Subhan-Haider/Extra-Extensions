@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Link Highlighter</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background: #fff;
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin: 0 0 15px 0;
+        }
+
+        .btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">🔗</div>
+    <h1>Link <span style="color: #ef4444;">Scanner</span></h1>
+    <button id="scan" class="btn">Scan for Dead Links</button>
+    <p>Highlights potential 404s in red.</p>
+    <script>
+        document.getElementById('scan').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            chrome.scripting.executeScript({ target: { tabId: tab.id }, files: ['scan.js'] });
+        };
+    </script>
+</body>
+
+</html>

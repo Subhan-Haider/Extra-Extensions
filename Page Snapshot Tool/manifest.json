@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Page Snapshot Tool",
+  "version": "1.0.0",
+  "description": "Capture any page exactly as you see it. Save as a single HTML file.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

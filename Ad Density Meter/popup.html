@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ad Meter</title>
+    <style>
+        body {
+            width: 240px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background: #fff;
+        }
+
+        .gauge {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 12px solid #f1f5f9;
+            margin: 0 auto 15px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #ef4444;
+        }
+
+        .aggression {
+            font-size: 10px;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ad <span style="color:#ef4444;">Density</span></h1>
+    <div class="gauge" style="border-top-color: #ef4444; border-right-color: #ef4444;">42%</div>
+    <div class="aggression">Status: Aggressive</div>
+    <p style="font-size:11px; color:#64748b;">Ads occupy almost half of the current viewport.</p>
+</body>
+
+</html>

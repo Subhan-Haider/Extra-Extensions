@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Cart Leak Detector",
+  "version": "1.0.0",
+  "description": "Stop aggressive store tracking. Detect and block scripts that record your checkout keystrokes.",
+  "permissions": [
+    "webRequest",
+    "notifications",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

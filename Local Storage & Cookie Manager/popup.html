@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Storage Manager</title>
+    <style>
+        body {
+            width: 350px;
+            padding: 15px;
+            background: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            color: #4338ca;
+        }
+
+        .tab-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tab {
+            font-size: 12px;
+            cursor: pointer;
+            color: #64748b;
+            padding-bottom: 4px;
+        }
+
+        .tab.active {
+            color: #4338ca;
+            border-bottom: 2px solid #4338ca;
+            font-weight: 700;
+        }
+
+        .data-list {
+            height: 250px;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 11px;
+        }
+
+        .data-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .data-item:hover {
+            background: #f8fafc;
+        }
+
+        .key {
+            font-weight: 600;
+            color: #1e293b;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .val {
+            color: #64748b;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Storage <span style="color:#6366f1;">Master</span></h1>
+
+    <div class="tab-bar">
+        <div class="tab active" id="tab-ls">Local Storage</div>
+        <div class="tab" id="tab-cookies">Cookies</div>
+    </div>
+
+    <div id="list" class="data-list">
+        <!-- Data injected here -->
+    </div>
+
+    <script>
+        const listEl = document.getElementById('list');
+
+        const render = (data) => {
+            listEl.innerHTML = '';
+            Object.entries(data).forEach(([key, val]) => {
+                const item = document.createElement('div');
+                item.className = 'data-item';
+                item.innerHTML = `<span class="key">${key}</span><span class="val">${val}</span>`;
+                listEl.appendChild(item);
+            });
+        };
+
+        document.getElementById('tab-ls').onclick = async () => {
+            const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+            chrome.scripting.executeScript({
+                target: { tabId: tab.id },
+                func: () => ({ ...localStorage })
+            }, (results) => {
+                render(results[0].result);
+            });
+        };
+
+        // Initial load
+        document.getElementById('tab-ls').click();
+    </script>
+</body>
+
+</html>

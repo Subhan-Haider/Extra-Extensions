@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Fake Job Post Detector",
+  "version": "1.0.0",
+  "description": "Protect your career. AI-powered detection for scam or bot-generated job listings.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.linkedin.com/*",
+        "*://www.indeed.com/*",
+        "*://www.glassdoor.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

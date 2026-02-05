@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Detector</title>
+    <style>
+        :root {
+            --accent: #6366f1;
+            --bg: #f8fafc;
+        }
+
+        body {
+            width: 280px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: #1e293b;
+            text-align: center;
+        }
+
+        .mood-ring {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 8px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            transition: all 0.5s;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            width: 100%;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #mood-text {
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        #bias-text {
+            font-size: 11px;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Site <span style="color:var(--accent);">Mood</span></h1>
+
+    <div class="mood-ring" id="ring">🔍</div>
+    <div id="mood-text">Waiting...</div>
+    <div id="bias-text">Click below to analyze tone.</div>
+
+    <button id="analyze" class="btn" style="margin-top:20px;">Analyze Mood</button>
+
+    <script>
+        document.getElementById('analyze').onclick = async () => {
+            document.getElementById('ring').textContent = '🧠';
+            document.getElementById('mood-text').textContent = 'Thinking...';
+
+            // AI Logic would go here, using the global AI key
+            setTimeout(() => {
+                document.getElementById('ring').textContent = '🤑';
+                document.getElementById('ring').style.borderColor = '#10b981';
+                document.getElementById('mood-text').textContent = 'Highly Salesy';
+                document.getElementById('bias-text').textContent = 'Bias: Commercial intent detected.';
+            }, 1500);
+        };
+    </script>
+</body>
+
+</html>

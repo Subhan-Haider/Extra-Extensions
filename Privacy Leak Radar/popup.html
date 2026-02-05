@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Leak Radar</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #0c0a09;
+            color: #fb7185;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #292524;
+            padding-bottom: 10px;
+        }
+
+        .item {
+            margin-bottom: 12px;
+            font-size: 11px;
+            padding-left: 10px;
+            border-left: 2px solid #fb7185;
+        }
+
+        .host {
+            font-weight: 700;
+            color: #fecdd3;
+        }
+
+        .time {
+            float: right;
+            opacity: 0.5;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Leak <span style="color:#fb7185;">Radar</span></h1>
+    <div id="list">Ready for scan...</div>
+    <script>
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.runtime.sendMessage({ type: 'GET_LEAKS', tabId: tabs[0].id }, (leaks) => {
+                const list = document.getElementById('list');
+                list.innerHTML = '';
+                if (leaks.length === 0) list.textContent = 'No trackers detected yet.';
+                leaks.forEach(l => {
+                    const div = document.createElement('div');
+                    div.className = 'item';
+                    div.innerHTML = `<span class="time">${l.time}</span><span class="host">${l.host}</span>`;
+                    list.appendChild(div);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

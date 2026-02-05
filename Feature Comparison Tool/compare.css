@@ -1,0 +1,14 @@
+#floating-compare-box {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 220px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    font-family: sans-serif;
+    z-index: 1000000;
+    border: 1px solid #e2e8f0;
+    font-size: 11px;
+}

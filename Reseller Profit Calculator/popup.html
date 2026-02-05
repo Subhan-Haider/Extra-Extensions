@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Profit Calc</title>
+    <style>
+        :root {
+            --accent: #16a34a;
+            --bg: #fff;
+        }
+
+        body {
+            width: 260px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100px;
+            text-align: right;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 4px;
+        }
+
+        .profit-box {
+            background: #f0fdf4;
+            border: 2px solid var(--accent);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .profit-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Reseller <span style="color:var(--accent);">Profit</span></h1>
+
+    <div class="row">
+        <span>Sale Price:</span>
+        <input type="number" id="sale" value="100">
+    </div>
+    <div class="row">
+        <span>Item Cost:</span>
+        <input type="number" id="cost" value="40">
+    </div>
+    <div class="row">
+        <span>Fees (13%):</span>
+        <input type="number" id="fees" value="13">
+    </div>
+
+    <div class="profit-box">
+        <div style="font-size:10px; color:#166534; font-weight:700;">NET PROFIT</div>
+        <div class="profit-val" id="profit">$47.00</div>
+    </div>
+
+    <script>
+        const calc = () => {
+            const sale = document.getElementById('sale').value;
+            const cost = document.getElementById('cost').value;
+            const fees = document.getElementById('fees').value;
+            document.getElementById('profit').textContent = '$' + (sale - cost - fees).toFixed(2);
+        };
+        document.querySelectorAll('input').forEach(i => i.oninput = calc);
+    </script>
+</body>
+
+</html>

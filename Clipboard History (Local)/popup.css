@@ -1,0 +1,138 @@
+:root {
+    --bg: #0a0a0a;
+    --panel: #171717;
+    --accent: #10b981;
+    --text: #e5e5e5;
+    --text-dim: #737373;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 380px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.cipher-app {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.ghost-btn {
+    background: transparent;
+    border: 1px solid var(--glass);
+    color: var(--text-dim);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: all 0.2s;
+}
+
+.ghost-btn:hover {
+    color: #ef4444;
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--glass);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--accent);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.clip-card {
+    background: var(--panel);
+    border: 1px solid var(--glass);
+    padding: 14px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clip-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.clip-text {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--glass);
+    text-align: center;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+}

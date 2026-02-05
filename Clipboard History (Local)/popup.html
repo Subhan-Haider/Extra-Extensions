@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clipboard Cipher</title>
+    <link rel="stylesheet" href="popup.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="cipher-app">
+        <header>
+            <div class="brand">
+                <div class="logo"><span>[]</span></div>
+                <h1>Clipboard <span class="accent">History</span></h1>
+            </div>
+            <button id="clear-all" class="ghost-btn">Clear</button>
+        </header>
+
+        <div class="search-box">
+            <input type="text" id="filter" placeholder="Search snippets...">
+        </div>
+
+        <main id="clip-list">
+            <!-- Snippets will be injected here -->
+        </main>
+
+        <div class="footer">
+            <p>Local storage only. Stay secure.</p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

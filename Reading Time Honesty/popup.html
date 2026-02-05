@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Time Truth</title>
+    <style>
+        body {
+            width: 200px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            background: #fff;
+        }
+
+        .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .time {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #6366f1;
+        }
+
+        p {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="icon">📖</div>
+    <div class="time" id="time">12m</div>
+    <p id="words">2,410 words</p>
+    <p style="font-size:9px; color:#94a3b8; margin-top:15px;">Calculated at 200 words/min.</p>
+
+    <script>
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+            chrome.scripting.executeScript({
+                target: { tabId: tabs[0].id },
+                func: () => document.body.innerText.split(/\s+/).length
+            }, (results) => {
+                const count = results[0].result;
+                const min = Math.ceil(count / 200);
+                document.getElementById('time').textContent = min + 'm';
+                document.getElementById('words').textContent = count.toLocaleString() + ' words';
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Meeting Time Zone Converter",
+  "version": "1.0.0",
+  "description": "Hover over any time string to see it in your local time zone. Never miss a meeting.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "tooltip.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

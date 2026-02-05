@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Website Dark Mode Controller",
+  "version": "1.0.0",
+  "description": "Custom dark mode, brightness, and contrast for every website.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

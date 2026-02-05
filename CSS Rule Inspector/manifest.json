@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "CSS Rule Inspector",
+  "version": "1.0.0",
+  "description": "Click any element to see only its applied CSS rules. Ultra-lightweight debugging.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

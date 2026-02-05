@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Language Bubble Translator",
+  "version": "1.0.0",
+  "description": "Hover over any text for instant, elegant translations. Understand the web globally.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

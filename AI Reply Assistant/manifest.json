@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "AI Reply Assistant",
+  "version": "1.0.0",
+  "description": "Smart AI-suggested replies for social media and emails using your API key.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://mail.google.com/*",
+        "*://www.linkedin.com/*",
+        "*://x.com/*",
+        "*://www.reddit.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

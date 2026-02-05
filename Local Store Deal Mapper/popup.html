@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Local Deals</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #dc2626;
+            margin-bottom: 20px;
+        }
+
+        .deal-card {
+            background: #fef2f2;
+            border: 1px solid #fee2e2;
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .store-name {
+            font-weight: 700;
+            color: #991b1b;
+        }
+
+        .price {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #dc2626;
+        }
+
+        .distance {
+            font-size: 10px;
+            color: #991b1b;
+            opacity: 0.7;
+        }
+
+        .btn {
+            background: #dc2626;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Offline <span style="color:#000;">Finder</span></h1>
+
+    <div id="results">
+        <div class="deal-card">
+            <div class="store-name">TechHub (Main St.)</div>
+            <div class="price">$149.00 <span
+                    style="text-decoration:line-through; font-size:12px; opacity:0.6;">$199</span></div>
+            <div class="distance">0.8 miles away - In Stock</div>
+        </div>
+    </div>
+
+    <button class="btn">Find Nearby Stores</button>
+    <p style="font-size:10px; color:#666; text-align:center; margin-top:10px;">Compares against local inventory APIs.
+    </p>
+</body>
+
+</html>

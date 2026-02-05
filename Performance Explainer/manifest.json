@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Performance Explainer",
+  "version": "1.0.0",
+  "description": "Understand why a website is slow in plain English. No complex charts, just insights.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

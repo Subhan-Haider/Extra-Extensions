@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Focus Website Timer</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="zen-container">
+        <header>
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" class="lotus-icon">
+                    <path
+                        d="M12 3c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM12 7c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zM12 15c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6z" />
+                </svg>
+                <span>ZenTimer</span>
+            </div>
+            <div class="date" id="date-display">February 5</div>
+        </header>
+
+        <div class="focus-card">
+            <h2 id="current-site">Browsing Mindfully</h2>
+            <div class="timer-display" id="active-timer">00:00</div>
+            <p class="limit-status" id="limit-info">No limit set for this site</p>
+        </div>
+
+        <div class="settings-panel">
+            <h3>Today's Usage</h3>
+            <div id="usage-list" class="usage-list">
+                <!-- Usage rows injected here -->
+            </div>
+        </div>
+
+        <button id="set-limit" class="zen-btn">Set Limit for Current Site</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

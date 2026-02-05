@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Speed Report</title>
+    <style>
+        body {
+            width: 260px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .insight {
+            background: #fef2f2;
+            border-radius: 8px;
+            padding: 12px;
+            border-left: 4px solid #ef4444;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .label {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Speed <span style="color:#ef4444;">Insights</span></h1>
+
+    <div class="insight">
+        <span class="label">Slow Images</span>
+        There are 5 images larger than 2MB. This is the main reason for the delay.
+    </div>
+    <div class="insight" style="background:#fff7ed; border-color:#f97316;">
+        <span class="label" style="color:#9a3412;">3rd Party Scripts</span>
+        Tracking pixels are taking 1.5s to load.
+    </div>
+</body>
+
+</html>

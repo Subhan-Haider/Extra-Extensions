@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Security Header Checker",
+  "version": "1.0.0",
+  "description": "Scan and identify weak security configurations on any website. Protect your browsing.",
+  "permissions": [
+    "webRequest",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

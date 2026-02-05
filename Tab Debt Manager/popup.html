@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Debt Manager</title>
+    <link rel="stylesheet" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>Tab Debt <span class="accent">Manager</span></h1>
+                <p class="subtitle">Guilt-free session management</p>
+            </div>
+            <div class="debt-score-container">
+                <div class="debt-ring">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="debt-circle" class="circle" stroke-dasharray="0, 100"
+                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                    </svg>
+                    <div class="score-text">
+                        <span id="debt-count">0</span>
+                        <small>Tabs</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="label">Total Debt</span>
+                    <span id="total-time" class="value">0h</span>
+                </div>
+                <div class="stat-card">
+                    <span class="label">Oldest Tab</span>
+                    <span id="oldest-tab-time" class="value">--</span>
+                </div>
+            </div>
+
+            <div class="section-header">
+                <h2>Clutter Suggestions</h2>
+                <button id="clear-all" class="secondary-btn">Clear Stale</button>
+            </div>
+
+            <div id="tab-list" class="tab-list">
+                <!-- Tabs will be injected here -->
+                <div class="loader">Scanning tab history...</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Save memory, clear the debt.</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

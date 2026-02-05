@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delivery Truth</title>
+    <style>
+        body {
+            width: 240px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #eff6ff;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1d4ed8;
+            text-align: center;
+            margin-bottom: 0;
+        }
+
+        .box {
+            background: white;
+            border: 1px solid #bfdbfe;
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .label {
+            font-size: 10px;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .val {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .truth {
+            color: #f97316;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Delivery <span style="color:#d97706;">Truth</span></h1>
+
+    <div class="box">
+        <div class="label">Their Estimate</div>
+        <div class="val">-- Days</div>
+
+        <div class="label">Realistic Prediction</div>
+        <div class="val truth">-- Days</div>
+        <div style="font-size:9px; color:#94a3b8; line-height:1.4;">Based on recent logistics data for your area and the
+            carrier identified.</div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

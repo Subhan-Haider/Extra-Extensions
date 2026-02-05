@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Resume Match</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-bottom: 20px;
+        }
+
+        .score-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .score-ring {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 6px solid #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 10px;
+        }
+
+        .missing-skills {
+            background: #fef2f2;
+            border: 1px solid #fee2e2;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Job <span style="color:#10b981;">Match</span></h1>
+
+    <div class="score-container">
+        <div class="score-ring">74%</div>
+        <div style="font-weight:700; color:#334155;">Strong Match</div>
+    </div>
+
+    <div class="missing-skills">
+        <strong>Missing Keywords:</strong> Docker, Kubernetes, Next.js Middleware.
+    </div>
+
+    <button
+        style="background:#10b981; color:white; border:none; padding:12px; width:100%; border-radius:8px; margin-top:20px; font-weight:700; cursor:pointer;">Update
+        Resume Context</button>
+</body>
+
+</html>

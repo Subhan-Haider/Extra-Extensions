@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Fake Review Detector",
+  "version": "1.0.0",
+  "description": "AI-powered review analysis to identify fake or incentivized comments.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

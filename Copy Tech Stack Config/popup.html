@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Config Exporter</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            background: #0c0a09;
+            color: #a8a29e;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .config-view {
+            background: #1c1917;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #292524;
+            font-size: 11px;
+            color: #facc15;
+        }
+
+        .btn {
+            background: #facc15;
+            color: #0c0a09;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Infra <span style="color:#facc15;">Exposer</span></h1>
+
+    <div class="config-view">
+        {<br>
+        &nbsp;&nbsp;"hosting": "vercel",<br>
+        &nbsp;&nbsp;"analytics": "google",<br>
+        &nbsp;&nbsp;"database": "prisma/postgresql"<br>
+        }
+    </div>
+
+    <button class="btn">Copy .env / Config</button>
+</body>
+
+</html>

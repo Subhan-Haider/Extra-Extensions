@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AI Settings</title>
+    <style>
+        :root {
+            --accent: #8b5cf6;
+            --bg: #0f172a;
+        }
+
+        body {
+            width: 300px;
+            padding: 20px;
+            background: var(--bg);
+            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .input-grp {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 6px;
+        }
+
+        input {
+            width: 100%;
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 12px;
+            border-radius: 8px;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .notice {
+            font-size: 10px;
+            color: #64748b;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AI <span style="color:#fff;">Settings</span></h1>
+
+    <div class="input-grp">
+        <label>API Provider</label>
+        <select id="provider"
+            style="width:100%; background:#1e293b; color:white; padding:10px; border-radius:8px; border:1px solid #334155;">
+            <option value="openrouter">OpenRouter (Recommended)</option>
+            <option value="openai">OpenAI</option>
+        </select>
+    </div>
+
+    <div class="input-grp">
+        <label>API Key</label>
+        <input type="password" id="api-key" placeholder="sk-...">
+    </div>
+
+    <button id="save" class="btn">Save Global Key</button>
+
+    <p class="notice">All AI extensions in this suite will use this key for requests. Your key is stored locally and
+        never shared.</p>
+
+    <script>
+        const keyInput = document.getElementById('api-key');
+        const provInput = document.getElementById('provider');
+
+        chrome.storage.local.get(['global_ai_key', 'global_ai_provider'], (res) => {
+            if (res.global_ai_key) keyInput.value = res.global_ai_key;
+            if (res.global_ai_provider) provInput.value = res.global_ai_provider;
+        });
+
+        document.getElementById('save').onclick = () => {
+            chrome.storage.local.set({
+                global_ai_key: keyInput.value,
+                global_ai_provider: provInput.value
+            }, () => alert('Key Saved Successfully!'));
+        };
+    </script>
+</body>
+
+</html>

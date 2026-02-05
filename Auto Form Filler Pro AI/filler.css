@@ -1,0 +1,11 @@
+.ai-magic-btn {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    cursor: pointer;
+    margin-top: 5px;
+    display: block;
+}

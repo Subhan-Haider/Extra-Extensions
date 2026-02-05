@@ -1,0 +1,17 @@
+#ai-unsubscribe-btn {
+    background: #f43f5e;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+    cursor: pointer;
+    margin-left: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#ai-unsubscribe-btn:hover {
+    background: #e11d48;
+    transform: translateY(-1px);
+}

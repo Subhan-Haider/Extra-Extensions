@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Question Generator AI",
+  "version": "1.0.0",
+  "description": "Never run out of smart things to say. Auto-generate insightful questions for meetings and articles.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.svg",
+      "32": "icon.svg",
+      "48": "icon.svg",
+      "128": "icon.svg"
+    }
+  },
+  "icons": {
+    "16": "icon.svg",
+    "32": "icon.svg",
+    "48": "icon.svg",
+    "128": "icon.svg"
+  }
+}

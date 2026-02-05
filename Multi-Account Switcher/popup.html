@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Switch Account</title>
+    <style>
+        body {
+            width: 220px;
+            padding: 15px;
+            background: #fafafa;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .profile:hover {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #e2e8f0;
+        }
+
+        .name {
+            font-size: 12px;
+            font-weight: 600;
+            color: #334155;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Switch <span style="color:#3b82f6;">Profile</span></h1>
+
+    <div class="profile">
+        <div class="avatar" style="background:#3b82f6;"></div>
+        <div class="name">Work (Main)</div>
+    </div>
+    <div class="profile">
+        <div class="avatar" style="background:#10b981;"></div>
+        <div class="name">Personal</div>
+    </div>
+    <div class="profile">
+        <div class="avatar" style="background:#f59e0b;"></div>
+        <div class="name">Creator / Side</div>
+    </div>
+</body>
+
+</html>

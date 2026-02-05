@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>API Inspector</title>
+    <style>
+        body {
+            width: 400px;
+            padding: 15px;
+            background: #0f172a;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        h1 {
+            font-size: 1rem;
+            color: #38bdf8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .btn-clear {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+
+        #log-list {
+            height: 300px;
+            overflow-y: auto;
+            background: #1e293b;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .log-item {
+            padding: 8px;
+            border-bottom: 1px solid #334155;
+            display: flex;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        .method {
+            color: #22c55e;
+            font-weight: 800;
+            width: 50px;
+        }
+
+        .url {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0 10px;
+            opacity: 0.8;
+        }
+
+        .time {
+            color: #94a3b8;
+            font-size: 9px;
+        }
+
+        .empty {
+            padding: 40px;
+            text-align: center;
+            color: #64748b;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>API <span style="color:#fff;">Inspector</span> <button id="clear-btn" class="btn-clear">Clear</button></h1>
+    <div id="log-list"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

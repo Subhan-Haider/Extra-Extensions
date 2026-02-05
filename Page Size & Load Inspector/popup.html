@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Page Stats</title>
+    <style>
+        body {
+            width: 240px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #1e293b;
+            margin-top: 0;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        .val {
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .divider {
+            height: 1px;
+            background: #f1f5f9;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Page <span style="color:#6366f1;">Inspector</span></h1>
+
+    <div class="stat-row">
+        <span>Total Weight:</span>
+        <span class="val" id="size">0.00 MB</span>
+    </div>
+    <div class="stat-row">
+        <span>Resource Count:</span>
+        <span class="val" id="requests">0</span>
+    </div>
+    <div class="stat-row">
+        <span>Finish Time:</span>
+        <span class="val" id="time">0.0s</span>
+    </div>
+
+    <div class="divider"></div>
+    <p style="font-size:10px; color:#94a3b8; text-align:center;">Metrics captured from real-time browser performance
+        timeline.</p>
+    <script src="popup.js"></script>
+</body>
+
+</html>

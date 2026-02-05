@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Request Blocker</title>
+    <style>
+        body {
+            width: 250px;
+            padding: 20px;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            color: #ef4444;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 100%;
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            width: 100%;
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .list {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Traffic <span style="color:#fff;">Blocker</span></h1>
+    <input type="text" id="domain" placeholder="example-tracker.com">
+    <button id="add" class="btn">BLOCK DOMAIN</button>
+
+    <div class="list" id="blocked-list">Blocked: None</div>
+
+    <script>
+        document.getElementById('add').onclick = () => {
+            const domain = document.getElementById('domain').value;
+            if (domain) {
+                // In MV3, dynamic rules use chrome.declarativeNetRequest.updateDynamicRules
+                chrome.declarativeNetRequest.updateDynamicRules({
+                    addRules: [{
+                        id: Math.floor(Math.random() * 1000) + 1,
+                        priority: 1,
+                        action: { type: 'block' },
+                        condition: { urlFilter: domain, resourceTypes: ['main_frame', 'script', 'image'] }
+                    }]
+                });
+                document.getElementById('blocked-list').textContent = 'Blocked: ' + domain;
+            }
+        };
+    </script>
+</body>
+
+</html>
