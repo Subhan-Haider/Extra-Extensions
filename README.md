@@ -82,29 +82,43 @@
 ### 🛠️ 03. Tactical Utilities & Media
 <table width="100%">
   <tr>
-    <td width="25%" valign="top">
+    <td width="33%" valign="top">
       <h4>🖼️ Image Pro</h4>
-      WebP, AVIF, and HEIC batch conversion with local optimization.
+      Professional batch conversion (WebP, AVIF, HEIC) with local optimization.
       <br><br>
-      <a href="https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm">Install</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/image-converter-pro/lfpglidefppfbjhbnofifodlfcenldhm">Store</a> | <a href="./Image%20Converter%20Pro">Docs</a>
     </td>
-    <td width="25%" valign="top">
+    <td width="33%" valign="top">
       <h4>🎮 LootOps</h4>
-      Tactical radar for Epic & Steam free games. Never miss a drop.
+      Tactical radar for Epic & Steam free games. Never miss a luxury drop.
       <br><br>
-      <a href="https://chromewebstore.google.com/detail/lootops-epic-steam-games/ghghcceghdbplljhoagblgbfepepfbcl">Install</a>
+      <a href="https://chromewebstore.google.com/detail/lootops-epic-steam-games/fbapdcgkainjgpgmopmgofaiieamenmi">Store</a> | <a href="./LootOps%20Epic%20&%20Steam%20Games">Docs</a>
     </td>
-    <td width="25%" valign="top">
+    <td width="33%" valign="top">
       <h4>📥 Video DL</h4>
       Legal, high-speed offline downloader for educational content.
       <br><br>
-      <a href="https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok">Install</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/offline-video-downloader/ifamcdfeinodklblkdbigioankbbjaok">Store</a> | <a href="./Offline%20Video%20Downloader">Docs</a>
     </td>
-    <td width="25%" valign="top">
+  </tr>
+  <tr>
+    <td valign="top">
       <h4>🚫 Ad Blocker</h4>
-      Privacy-first removal of intrusive advertising with zero overhead.
+      Privacy-first removal of intrusive ads with zero system overhead.
       <br><br>
-      <a href="https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi">Install</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/simple-ad-blocker/nebafhbonjfjllpfcjffhiinemmdcmpi">Store</a> | <a href="./Simple%20Ad%20Blocker">Docs</a>
+    </td>
+    <td valign="top">
+      <h4>🔍 CodeLens</h4>
+      Explore and analyze extension source code directly in the browser.
+      <br><br>
+      <a href="https://chromewebstore.google.com/detail/codelens-extension-source/lhpkbkfmhjgfbdphndmbpfmgfjdnmklf">Store</a> | <a href="./CodeLens%20Extension%20Source%20Explorer">Docs</a>
+    </td>
+    <td valign="top">
+      <h4>⌨️ Collector</h4>
+      Paragraph reconstruction and contextual analysis for Typing.com.
+      <br><br>
+      <a href="https://chromewebstore.google.com/detail/typingcom-full-paragraph/gfgjhmopbkgdpmddfhmphgddcbnkljce">Store</a> | <a href="./Typing.com%20Full%20Paragraph%20Collector">Docs</a>
     </td>
   </tr>
 </table>
