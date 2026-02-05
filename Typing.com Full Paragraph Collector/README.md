@@ -1,79 +1,90 @@
 <div align="center">
 
 # ⌨️ Typing.com Full Paragraph Collector
-### *Automate your typing practice insights by reconstructing full lesson paragraphs.*
+### *Unlock professional-grade practice metrics by reconstructing full context from your typing lessons.*
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=for-the-badge)](https://github.com/Subhan-Haider/Extra-Extensions)
 [![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Chrome](https://img.shields.io/badge/Chrome-Compatible-brightgreen.svg?style=for-the-badge)](https://chromewebstore.google.com/detail/typingcom-full-paragraph/gfgjhmopbkgdpmddfhmphgddcbnkljce)
 [![Edge](https://img.shields.io/badge/Edge-Compatible-blue.svg?style=for-the-badge)](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf)
 
-[Features](#-features) • [Installation](#-installation) • [Usage](#-how-to-use) • [Privacy](#-privacy) • [Developer](#-about-the-developer)
+[Key Features](#-the-power-of-context) • [Usage Guide](#-step-by-step-usage) • [Installation](#-installation-options) • [Privacy First](#-privacy--security) • [Developer](#-about-the-developer)
 
 ---
 
 </div>
 
-## 🚀 Speed Up Your Typing Analysis
+## 🚀 Reclaim Your Typing Context
 
-**Typing.com Full Paragraph Collector** is a specialized utility designed for serious typists. Instead of viewing lesson words one by one, this extension intelligently reconstructs the entire paragraph from the page, allowing you to preview, analyze, or practice with the full context of the lesson.
+**Typing.com Full Paragraph Collector** is a high-utility browser extension designed specifically for the **Typing.com** platform. While the official interface shows words one-by-one or in fragmented lines, this tool uses intelligent DOM analysis to reconstruct the original, full paragraph in real-time.
 
----
-
-## ✨ Features
-
-*   **🧩 Paragraph Reconstruction**: Automatically scans the current lesson page and stitches individual words back into a coherent paragraph.
-*   **⚡ Lightweight Integration**: Operates seamlessly with the Typing.com interface without slowing down your browser.
-*   **📋 One-Click Copy**: Get the full text of any lesson instantly for external practice or analysis.
-*   **🔒 Privacy First**: No external data calls. All collection happens locally on your machine.
-*   **🎨 Minimalist UI**: A clean, distraction-free popup that gives you the data you need and stays out of your way.
+Whether you are a competitive typist looking to analyze text complexity, a student wanting to preview difficult sections, or a developer needing clean practice data, this tool provides the "Big Picture" instantly.
 
 ---
 
-## 🛠️ Installation
+## ✨ The Power of Context
 
-### 🌐 Official Stores (Recommended)
+### 🧩 Intelligent Paragraph Reconstruction
+*   **DOM Harvesting**: Scans the active lesson container to identify and extract word elements.
+*   **Coherent Stitching**: Automatically adds appropriate spacing and handles line breaks to present a perfect, readable paragraph.
+*   **Dynamic Updates**: Re-scans instantly if the lesson changes, ensuring you always have the latest text.
+
+### ⚡ High-Performance Utility
+*   **Zero-Lag Operation**: Built with optimized JavaScript to ensure it doesn't impact your typing WPM or browser responsiveness.
+*   **One-Click Export**: Feature a dedicated 'Copy' button inside the popup to send the reconstructed text to your clipboard.
+*   **Glassmorphism UI**: A modern, sleek popup design that matches the professional aesthetic of high-end developer tools.
+
+### 🎯 Practice Enhancement
+*   **Contextual Preview**: Understand the punctuation and grammar flow of the entire lesson before you start typing.
+*   **External Practice**: Take any Typing.com paragraph and use it in your own custom typing software or text editors.
+
+---
+
+## 📖 Step-by-Step Usage
+
+1.  **Start a Lesson**: Log in to [Typing.com](https://www.typing.com) and enter any typing lesson or test.
+2.  **Activate Collector**: Click the ⌨️ extension icon in your toolbar.
+3.  **View & Analyze**: The popup will instantly display the full reconstructed paragraph.
+4.  **Copy Text**: Click the **"Copy Paragraph"** button to save the text for your own records or analysis.
+
+---
+
+## 🛠️ Installation Options
+
+### 🌐 Browser Stores (Latest Stable)
 *   **Chrome Web Store**: [**Install for Chrome**](https://chromewebstore.google.com/detail/typingcom-full-paragraph/gfgjhmopbkgdpmddfhmphgddcbnkljce)
 *   **Edge Add-ons**: [**Install for Edge**](https://microsoftedge.microsoft.com/addons/detail/typingcom-full-paragraph/kpgpjcpdnadnmhjdanjacjjpakcllhaf)
 
-### 🏗️ Manual Installation
-1.  Download or clone this folder.
-2.  Open your browser's extensions page (`chrome://extensions` or `edge://extensions`).
-3.  Enable **Developer Mode**.
-4.  Click **Load Unpacked** and select the extension folder.
-
----
-
-## 📖 How to Use
-
-1.  Navigate to any lesson on **Typing.com**.
-2.  Click the **Typing.com Collector** icon in your toolbar.
-3.  The extension will analyze the page and display the full paragraph in the popup.
-4.  Use the **Copy** button to save the text to your clipboard!
+### 👷 Developer Build (Manual)
+1.  Download the ZIP from this repository and extract it.
+2.  Navigate to your browser's extensions management page (`chrome://extensions` or `edge://extensions`).
+3.  Turn on **Developer Mode**.
+4.  Click **Load Unpacked** and select the root folder of this project.
 
 ---
 
 ## 🔒 Privacy & Security
 
-Your data is handled with the highest standards:
-*   ✅ **No Data Collection**: We don't track your speed, accuracy, or username.
-*   ✅ **Local Only**: Everything is processed in your browser tab.
-*   ✅ **Open Source**: Transparent code for security review.
+This tool is built on the principle of **Data Sovereignty**:
+*   ✅ **No Background Tracking**: The extension only runs when you click the icon.
+*   ✅ **No Data Exfiltration**: We do not send the collected paragraphs to any server. They stay in your browser.
+*   ✅ **No Account Required**: Use it immediately without signing up for anything.
+*   ✅ **MIT Licensed**: Open-source transparency you can trust.
 
 ---
 
 ## 🤝 About the Developer
 
-Crafted with ❤️ by **Subhan Haider**. I build specialized tools to help users reclaim their data and improve their digital workflows.
+Crafted with passion by **Subhan Haider**. I focus on building "Micro-Tools" that solve niche problems with high-quality design and performance. 
 
 *   **GitHub**: [@Subhan-Haider](https://github.com/Subhan-Haider)
-*   **Edge Store**: [Subhan_Store](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store)
+*   **Portfolio**: [Subhan Extensions Portfolio](https://chromewebstore.google.com/search/Subhan%20Extensions)
 
 ---
 
 <div align="center">
 
-### 🌟 Useful for your practice? Star the repo! 🌟
+### 🌟 Finding this useful? Don't forget to star the repository! 🌟
 
 [⬆ Back to Top](#-typing.com-full-paragraph-collector)
 
