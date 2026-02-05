@@ -4,10 +4,18 @@
 ### *A Next-Generation Suite of Privacy-First, High-Performance Browser Architectures.*
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Suite_Status-Active_&_Optimized-6366f1?style=for-the-badge&logo=checkmarx" alt="Suite Status">
-  <img src="https://img.shields.io/badge/Manifest-V3_Certified-0ea5e9?style=for-the-badge&logo=googlechrome" alt="Manifest V3">
-  <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge-10b981?style=for-the-badge&logo=shield" alt="Privacy">
-  <img src="https://img.shields.io/badge/Architecture-Modular-f59e0b?style=for-the-badge&logo=blueprint" alt="Architecture">
+  <a href="https://github.com/Subhan-Haider/Extra-Extensions/commits/main">
+    <img src="https://img.shields.io/badge/Suite_Status-Active_&_Optimized-6366f1?style=for-the-badge&logo=checkmarx" alt="Suite Status">
+  </a>
+  <a href="https://developer.chrome.com/docs/extensions/mv3/intro/">
+    <img src="https://img.shields.io/badge/Manifest-V3_Certified-0ea5e9?style=for-the-badge&logo=googlechrome" alt="Manifest V3">
+  </a>
+  <a href="#-architecture--privacy-manifesto">
+    <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge-10b981?style=for-the-badge&logo=shield" alt="Privacy">
+  </a>
+  <a href="#-architecture--privacy-manifesto">
+    <img src="https://img.shields.io/badge/Architecture-Modular-f59e0b?style=for-the-badge&logo=blueprint" alt="Architecture">
+  </a>
 </p>
 
 [**🌐 Chrome Web Store Portfolio**](https://chromewebstore.google.com/search/Subhan%20Extensions) • [**🌐 Edge Add-ons Portfolio**](https://microsoftedge.microsoft.com/addons/search?developer=Subhan_Store) • [**🏗️ Architecture Specs**](#-architecture--privacy-manifesto)
